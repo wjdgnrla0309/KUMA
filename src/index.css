@@ -1,0 +1,18 @@
+@import "./styles/instagram.css";
+@import "./styles/sponsors.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 페이지 공통 동작만 둡니다. 섹션별 애니메이션은 styles에서 수정합니다. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .instagram-track,
+  .sponsor-track {
+    animation-play-state: paused;
+  }
+}

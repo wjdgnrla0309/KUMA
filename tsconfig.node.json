@@ -1,23 +1,26 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+
+    /* Vite 설정과 서버 API가 실행되는 Node.js 환경 */
     "target": "es2023",
     "lib": ["ES2023"],
     "types": ["node"],
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Node.js 모듈 해석과 타입 검사 전용 출력 설정 */
     "module": "nodenext",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
 
-    /* Linting */
+    /* 사용하지 않는 코드와 실수하기 쉬운 구문 검사 */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vite.config.ts"]
+  // Vite에서 직접 불러오지 않는 배포용 API도 타입 검사에 포함합니다.
+  "include": ["vite.config.ts", "server/**/*.ts", "api/**/*.ts"]
 }

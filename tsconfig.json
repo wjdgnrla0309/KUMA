@@ -1,4 +1,5 @@
 {
+  // 브라우저 코드와 Node 서버/설정을 각각 검사합니다.
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
