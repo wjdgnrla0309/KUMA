@@ -1,9 +1,11 @@
 // 데스크톱과 모바일 메뉴가 공유하는 순서와 이동 경로입니다.
+export const SITE_BASE_URL = import.meta.env.BASE_URL;
+
 export const NAVIGATION_LINKS = [
   { label: "ABOUT US", href: "#about" },
   { label: "COMPETITION", href: "#competition" },
   { label: "NEWS", href: "#news" },
-  { label: "GALLERY", href: "/gallery" },
+  { label: "GALLERY", href: `${SITE_BASE_URL}gallery` },
   { label: "SPONSORS", href: "#sponsors" },
   { label: "CONTACT US", href: "#contact" },
 ];

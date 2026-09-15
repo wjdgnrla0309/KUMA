@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SectionHeader } from "../components/SectionHeader";
 import { GALLERY_YEARS, PHOTO_ARCHIVE } from "../data/gallery";
+import { SITE_BASE_URL } from "../data/site";
 
 // /gallery 전용 화면: 선택한 연도의 사진 또는 등록 대기 안내를 표시합니다.
 export function GalleryPage() {
@@ -11,7 +12,7 @@ export function GalleryPage() {
     <main className="min-h-screen bg-racing-dark px-6 pb-20 pt-28 text-zinc-100">
       <div className="mx-auto max-w-7xl">
         <a
-          href="/"
+          href={SITE_BASE_URL}
           className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.12em] text-zinc-400 transition hover:text-racing-green"
         >
           ← BACK TO HOME

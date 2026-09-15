@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeader } from "../components/SectionHeader";
 import { GALLERY_PREVIEWS } from "../data/gallery";
+import { SITE_BASE_URL } from "../data/site";
 
 // 홈페이지 대표 사진과 전체 사진 페이지로 이동하는 링크를 표시합니다.
 export function GallerySection() {
@@ -21,7 +22,7 @@ export function GallerySection() {
           </p>
         </div>
         <a
-          href="/gallery"
+          href={`${SITE_BASE_URL}gallery`}
           className="inline-flex w-fit items-center gap-2 rounded-full border border-racing-green/60 px-4 py-2 text-xs font-mono font-bold tracking-[0.12em] text-racing-green transition hover:bg-racing-green hover:text-black"
         >
           VIEW ALL PHOTOS <ArrowUpRight className="h-4 w-4" />
