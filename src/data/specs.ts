@@ -44,7 +44,7 @@ export const VEHICLE_DATABASE = {
       { label: "윤거(전/후)", value: "1180 / 1160 mm" },
       { label: "공차 무게", value: "189 kg" },
       { label: "무게 배분(전/후)", value: "50% / 50%" },
-      { label: "엔진", value: "YAMAHA YZF-R3 (321cc DOHC)" },
+      { label: "엔진", value: "YAMAHA YZF-R3 (321cc)" },
       { label: "최고 출력 / 토크", value: "50 ps @ 10750 rpm / 44 Nm" },
       { label: "엔진 제어기 (ECU)", value: "ECU Master EMU Black" },
       { label: "종 감속비 / LSD", value: "2.9 : 1 / Drexler LSD" },

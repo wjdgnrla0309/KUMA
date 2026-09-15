@@ -23,7 +23,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     rank: "14 / 55 teams",
     image: achievementPhoto("KakaoTalk_20260829_190154401.jpg"),
     specs: [
-      { label: "Engine", value: "321cc DOHC" },
+      { label: "Engine", value: "yzf-r3(321cc)" },
       { label: "Power", value: "50 PS" },
       { label: "Top Speed", value: "131 km/h" },
       { label: "Class", value: "Formula" },
