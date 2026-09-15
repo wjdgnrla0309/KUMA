@@ -13,7 +13,7 @@ import { HeroSection } from "../sections/HeroSection";
 import { InstagramFeedSection } from "../sections/InstagramFeedSection";
 import { NewsSection } from "../sections/NewsSection";
 import { SponsorshipSection } from "../sections/SponsorshipSection";
-import { VehicleSpecsSection } from "../sections/VehicleSpecsSection";
+import { RecruitmentCard, VehicleSpecsSection } from "../sections/VehicleSpecsSection";
 
 /** 홈의 섹션 순서와 여러 섹션이 공유하는 선택·모달 상태만 관리합니다. */
 export function HomePage() {
@@ -32,6 +32,9 @@ export function HomePage() {
 
       {/* 화면에서 보이는 순서대로 섹션을 배치합니다. */}
       <main>
+        <div className="mx-auto max-w-7xl px-6 pt-24">
+          <RecruitmentCard />
+        </div>
         <HeroSection onOpenDecrypt={() => setIsDecryptOpen(true)} />
         <AboutKumaSection />
         <VehicleSpecsSection

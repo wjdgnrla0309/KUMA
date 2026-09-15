@@ -1,6 +1,6 @@
 import { Clock, Layers, Lock, Timer, Zap } from "lucide-react";
 import { ClassifiedSpecCard } from "../components/ClassifiedSpecCard";
-import { VEHICLE_REVEAL_DATE } from "../data/site";
+import { SITE_BASE_URL, VEHICLE_REVEAL_DATE } from "../data/site";
 import { useCountdown } from "../hooks/useCountdown";
 
 type HeroSectionProps = {
@@ -87,7 +87,7 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
 
       <div className="relative mt-12 w-full max-w-4xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl">
         <img
-          src="/cars/KUMA_testdriveing_filmcam.jpg"
+          src={`${SITE_BASE_URL}cars/KUMA_testdriveing_filmcam.jpg`}
           alt="KUMA 2027 개발 차량을 암시하는 테스트 주행 모습"
           className="h-[400px] w-full object-cover brightness-[0.22] contrast-125 grayscale transition-transform duration-500 hover:scale-105 hover:brightness-[0.3]"
         />

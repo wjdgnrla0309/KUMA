@@ -112,6 +112,19 @@ export function SponsorshipSection() {
         />
       </div>
 
+      <figure className="group relative mt-10 h-56 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 md:h-72">
+        <img
+          src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (22).jpg")}`}
+          alt="KUMA race car and team at competition"
+          loading="lazy"
+          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/25 to-transparent" />
+        <figcaption className="absolute inset-y-0 left-0 flex max-w-sm items-end p-6 text-lg font-black tracking-[-0.04em] text-white md:p-8 md:text-2xl">
+          Partner with the team behind the car.
+        </figcaption>
+      </figure>
+
       <div className="mt-10 grid gap-8 border-t border-zinc-800 pt-8 md:grid-cols-3">
         {SPONSOR_BENEFITS.map((benefit) => {
           const Icon = BENEFIT_ICONS[benefit.icon];

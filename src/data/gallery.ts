@@ -33,6 +33,18 @@ export const GALLERY_PREVIEWS: GalleryPreview[] = [
     category: "COMPETITION DAY",
     title: "대회 주행 기록",
   },
+  {
+    src: competitionPhoto("001 (9).jpg"),
+    alt: "KUMA race car cornering on track",
+    category: "ON TRACK",
+    title: "Pushing the limit",
+  },
+  {
+    src: competitionPhoto("001 (24).jpg"),
+    alt: "KUMA team at the race paddock",
+    category: "PIT & PADDOCK",
+    title: "Race weekend moments",
+  },
 ];
 
 

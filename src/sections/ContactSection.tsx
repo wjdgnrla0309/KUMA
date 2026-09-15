@@ -41,6 +41,18 @@ export function ContactSection() {
               </div>
             </div>
           </div>
+
+          <figure className="group relative mt-8 h-40 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
+            <img
+              src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (11).jpg")}`}
+              alt="KUMA formula car at the circuit"
+              loading="lazy"
+              className="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+            />
+            <figcaption className="absolute inset-0 flex items-end bg-gradient-to-t from-black/75 via-transparent to-transparent p-4 text-[10px] font-mono font-bold tracking-[0.16em] text-racing-green">
+              LET'S BUILD THE NEXT CAR
+            </figcaption>
+          </figure>
         </div>
 
         {/* 필수 입력 항목과 전송 결과 */}

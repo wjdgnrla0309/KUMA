@@ -9,6 +9,45 @@ type VehicleSpecsSectionProps = {
   selectedVehicle: VehicleData;
 };
 
+export function RecruitmentCard() {
+  return (
+    <aside className="mb-10 overflow-hidden rounded-3xl border border-racing-green/40 bg-zinc-950 shadow-[0_0_32px_rgba(36,198,126,0.08)]">
+      <div className="grid md:grid-cols-[minmax(0,1fr)_260px]">
+        <div className="p-6 md:p-8">
+          <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-racing-green">2027 DEVELOPMENT PROGRAM</span>
+          <h3 className="mt-3 text-3xl font-black tracking-[-0.06em] text-white md:text-4xl">KNU-F27 / NEXT VEHICLE</h3>
+          <p className="mt-4 max-w-[58ch] text-[clamp(0.95rem,1.5vw,1.125rem)] leading-[1.8] tracking-[-0.02em] text-zinc-300 [word-break:keep-all] sm:mt-5">
+            KUMA의 다음 차량은 현재 개발 중입니다. 신규부원과 함께 설계부터 제작, 테스트까지 2027 시즌을 만들어 갑니다.
+          </p>
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {[
+              ["TARGET WEIGHT", "TBA"],
+              ["POWERTRAIN", "TBA"],
+              ["AERO PACKAGE", "IN DEVELOPMENT"],
+              ["SEASON", "2027"],
+            ].map(([label, value]) => (
+              <div key={label} className="rounded-xl border border-zinc-800 bg-zinc-900/70 p-3">
+                <span className="block text-[9px] font-mono tracking-[0.14em] text-zinc-500">{label}</span>
+                <span className="mt-2 block text-sm font-bold text-white">{value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center border-t border-zinc-800 bg-white p-6 text-center md:border-l md:border-t-0">
+          <img
+            src={`${import.meta.env.BASE_URL}recruitment-qr.png.png`}
+            alt="KUMA 신규부원 지원 QR 코드"
+            className="h-44 w-44 rounded-sm object-contain"
+          />
+          <p className="mt-4 text-sm font-black text-zinc-950">신규부원 지원하기</p>
+          <p className="mt-1 text-xs leading-5 text-zinc-600">QR 코드를 스캔해 지원서를 작성하세요.</p>
+        </div>
+      </div>
+    </aside>
+  );
+}
+
 /** 차량 선택은 홈과 공유하고, 모바일 상세 패널의 펼침 상태는 이 섹션에서 관리합니다. */
 export function VehicleSpecsSection({
   selectedYear,
@@ -22,6 +61,7 @@ export function VehicleSpecsSection({
       <div className="mb-8">
         <SectionHeader label="Vehicle Specs" title={selectedVehicle.modelName} className="!mt-0" />
         <p className="text-sm text-zinc-400 mt-3">{selectedVehicle.tagline}</p>
+        
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
@@ -83,6 +123,7 @@ export function VehicleSpecsSection({
           <VehicleDetailPanel selectedYear={selectedYear} selectedVehicle={selectedVehicle} />
         </div>
       </div>
+
     </section>
   );
 }

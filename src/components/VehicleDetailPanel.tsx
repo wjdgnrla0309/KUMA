@@ -1,5 +1,18 @@
 import type { VehicleData, VehicleYear } from "../data/specs";
 
+const DETAIL_PHOTOS = [
+  {
+    src: `${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (9).jpg")}`,
+    alt: "KUMA race car on track",
+    label: "ON TRACK",
+  },
+  {
+    src: `${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (24).jpg")}`,
+    alt: "KUMA race team in the paddock",
+    label: "RACE WEEKEND",
+  },
+];
+
 type VehicleDetailPanelProps = {
   selectedYear: VehicleYear;
   selectedVehicle: VehicleData;
@@ -45,6 +58,22 @@ export function VehicleDetailPanel({
                 <div className="text-[11px] font-mono font-semibold tracking-[0.16em] uppercase text-zinc-500">{item.label}</div>
                 <div className="mt-2 text-base font-semibold text-white">{item.value}</div>
               </div>
+            ))}
+          </div>
+
+          <div className="mt-5 grid grid-cols-2 gap-3">
+            {DETAIL_PHOTOS.map((photo) => (
+              <figure key={photo.src} className="group relative h-24 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-3 pb-2 pt-6 text-[9px] font-mono font-bold tracking-[0.14em] text-racing-green">
+                  {photo.label}
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>

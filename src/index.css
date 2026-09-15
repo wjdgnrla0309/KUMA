@@ -8,6 +8,21 @@
 /* 페이지 공통 동작만 둡니다. 섹션별 애니메이션은 styles에서 수정합니다. */
 html {
   scroll-behavior: smooth;
+  /* Keep the interface readable on large displays without making mobile UI oversized. */
+  font-size: clamp(16px, 0.5vw + 14px, 17px);
+}
+
+/* Small monospace labels appear throughout the telemetry-style UI. Give them a
+   consistent, legible minimum while preserving their visual hierarchy. */
+.text-\[9px\],
+.text-\[10px\] {
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.text-\[11px\] {
+  font-size: 0.8125rem;
+  line-height: 1.4;
 }
 
 @media (prefers-reduced-motion: reduce) {
