@@ -11,8 +11,8 @@ export type GalleryPreview = GalleryPhoto & {
 // GitHub Pages의 /KUMA/ 경로까지 자동 대응
 const BASE = import.meta.env.BASE_URL;
 
-const carPhoto = (year: string, file: string) =>
-  `${BASE}cars/${year}/${file}`;
+const competitionPhoto = (file: string) =>
+  `${BASE}cars/2026/competition/${encodeURIComponent(file)}`;
 
 
 // ─────────────────────────────
@@ -21,14 +21,14 @@ const carPhoto = (year: string, file: string) =>
 
 export const GALLERY_PREVIEWS: GalleryPreview[] = [
   {
-    src: carPhoto("2026", "001.webp"),
+    src: competitionPhoto("001 (1).jpg"),
     alt: "KUMA 차량 테스트 주행",
     category: "TEST DAY",
     title: "차량 테스트 주행",
   },
 
   {
-    src: carPhoto("2025", "001.webp"),
+    src: competitionPhoto("001 (2).jpg"),
     alt: "KUMA 차량 대회 주행 모습",
     category: "COMPETITION DAY",
     title: "대회 주행 기록",
@@ -41,36 +41,17 @@ export const GALLERY_PREVIEWS: GalleryPreview[] = [
 // ─────────────────────────────
 
 export const PHOTO_ARCHIVE: Record<string, GalleryPhoto[]> = {
-  "2026": [
-    {
-      src: carPhoto("2026", "001.webp"),
-      title: "Test Day",
-      category: "Vehicle Testing",
-    },
-    {
-      src: carPhoto("2026", "002.webp"),
-      title: "Test Day",
-      category: "Vehicle Testing",
-    },
-    {
-      src: carPhoto("2026", "003.webp"),
-      title: "Test Day",
-      category: "Vehicle Testing",
-    },
-  ],
+  "2026": Array.from({ length: 24 }, (_, index) => {
+    const file = `001 (${index + 1}).jpg`;
 
-  "2025": [
-    {
-      src: carPhoto("2025", "001.webp"),
+    return {
+      src: competitionPhoto(file),
       title: "Competition Day",
       category: "Race Weekend",
-    },
-    {
-      src: carPhoto("2025", "002.webp"),
-      title: "Competition Day",
-      category: "Race Weekend",
-    },
-  ],
+    };
+  }),
+
+  "2025": [],
 
   "2024": [],
 };
