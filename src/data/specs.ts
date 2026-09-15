@@ -19,11 +19,14 @@ export interface VehicleData {
   specs: SpecItem[];
 }
 
+const vehiclePhoto = (file: string) =>
+  `${import.meta.env.BASE_URL}cars/${encodeURIComponent(file)}`;
+
 // 연도를 추가하면 차량 선택 목록에도 자동으로 반영됩니다.
 export const VEHICLE_DATABASE = {
   "2026": {
     season: "2026",
-    image: "/cars/KUMA_testdriveing_filmcam.jpg",
+    image: vehiclePhoto("KUMA_testdriveing_filmcam.jpg"),
     carNumber: "No. 14",
     modelName: "KNU-F26",
     tagline: "경량 10인치 업라이트 패키징 및 고회전 자연흡기 파워트레인 최적화",
@@ -36,7 +39,7 @@ export const VEHICLE_DATABASE = {
 
     // 제원표 본문에 표시할 항목입니다. 값 변경 시 위 요약 수치도 확인합니다.
     specs: [
-      { label: "전장 / 전폭 / 전고", value: "2800 / 1200 / 1000 mm" },
+      { label: "전장 / 전폭 / 전고", value: "1900 / 1260 / 1100 mm" },
       { label: "축거", value: "1520 mm" },
       { label: "윤거(전/후)", value: "1180 / 1160 mm" },
       { label: "공차 무게", value: "189 kg" },
@@ -49,7 +52,7 @@ export const VEHICLE_DATABASE = {
   },
   "2025": {
     season: "2025",
-    image: "/cars/KakaoTalk_20260829_190154401.jpg",
+    image: vehiclePhoto("KakaoTalk_20260829_190154401.jpg"),
     carNumber: "No. 13",
     modelName: "KNU-F25",
     tagline: "내연기관 파워트레인과 공력 패키지의 기본기를 다진 모델",
@@ -71,7 +74,7 @@ export const VEHICLE_DATABASE = {
   },
   "2024": {
     season: "2024",
-    image: "/cars/KUMA_testdriveing_filmcam.jpg",
+    image: vehiclePhoto("KUMA_testdriveing_filmcam.jpg"),
     carNumber: "No. 12",
     modelName: "KNU-F24",
     tagline: "내연기관 파워트레인과 공력 패키지의 기본기를 다진 모델",
@@ -93,7 +96,7 @@ export const VEHICLE_DATABASE = {
   },
   "2023": {
     season: "2023",
-    image: "/cars/KakaoTalk_20260829_190154401.jpg",
+    image: vehiclePhoto("KakaoTalk_20260829_190154401.jpg"),
     carNumber: "No. 11",
     modelName: "KNU-F23",
     tagline: "내연기관 파워트레인과 공력 패키지의 기본기를 다진 모델",

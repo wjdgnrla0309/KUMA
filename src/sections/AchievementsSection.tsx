@@ -17,6 +17,20 @@ export function AchievementsSection({
         <span className="text-sm text-zinc-500">KUMA의 시즌별 성과와 차량 데이터를 확인하세요.</span>
       </div>
 
+      <figure className="group relative mb-8 h-48 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 sm:h-56">
+        <img
+          src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (24).jpg")}`}
+          alt="KUMA team at a race weekend"
+          loading="lazy"
+          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/20 to-transparent" />
+        <figcaption className="absolute bottom-0 left-0 p-5 sm:p-6">
+          <span className="text-xs font-mono font-bold tracking-[0.2em] text-racing-green">KUMA RACING TEAM</span>
+          <p className="mt-2 text-lg font-black text-white sm:text-xl">Moments that made the season.</p>
+        </figcaption>
+      </figure>
+
       <div className="space-y-5">
         {ACHIEVEMENTS.map((achievement) => (
           <button

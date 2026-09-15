@@ -16,10 +16,6 @@ export function AboutKumaSection() {
             className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-          <figcaption className="absolute bottom-0 left-0 p-5">
-            <span className="text-[10px] font-mono font-bold tracking-[0.2em] text-racing-green">KUMA RACING TEAM</span>
-            <p className="mt-2 text-lg font-black text-white">Built for the next lap.</p>
-          </figcaption>
         </figure>
         <SectionHeader
           label="About KUMA"

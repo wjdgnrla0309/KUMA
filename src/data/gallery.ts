@@ -54,7 +54,7 @@ export const GALLERY_PREVIEWS: GalleryPreview[] = [
 
 export const PHOTO_ARCHIVE: Record<string, GalleryPhoto[]> = {
   "2026": Array.from({ length: 24 }, (_, index) => {
-    const file = `001 (${index + 1}).jpg`;
+    const file = `KakaoTalk_20260829_190154401 (${index + 1}).jpg`;
 
     return {
       src: competitionPhoto(file),

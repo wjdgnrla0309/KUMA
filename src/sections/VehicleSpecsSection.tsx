@@ -11,7 +11,7 @@ type VehicleSpecsSectionProps = {
 
 export function RecruitmentCard() {
   return (
-    <aside className="mb-10 overflow-hidden rounded-3xl border border-racing-green/40 bg-zinc-950 shadow-[0_0_32px_rgba(36,198,126,0.08)]">
+    <aside className="mb-2 overflow-hidden rounded-3xl border border-racing-green/40 bg-zinc-950 shadow-[0_0_32px_rgba(36,198,126,0.08)]">
       <div className="grid md:grid-cols-[minmax(0,1fr)_260px]">
         <div className="p-6 md:p-8">
           <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-racing-green">2027 DEVELOPMENT PROGRAM</span>
@@ -61,7 +61,7 @@ export function VehicleSpecsSection({
       <div className="mb-8">
         <SectionHeader label="Vehicle Specs" title={selectedVehicle.modelName} className="!mt-0" />
         <p className="text-sm text-zinc-400 mt-3">{selectedVehicle.tagline}</p>
-        
+
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
@@ -123,7 +123,6 @@ export function VehicleSpecsSection({
           <VehicleDetailPanel selectedYear={selectedYear} selectedVehicle={selectedVehicle} />
         </div>
       </div>
-
     </section>
   );
 }
