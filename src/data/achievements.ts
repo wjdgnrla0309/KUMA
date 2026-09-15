@@ -48,7 +48,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     category: "Engineering",
     title: "Powertrain",
     short: "엔진 세팅과 제어 최적화를 통해 트랙 대응력을 높였습니다.",
-    rank: "3rd / 8 teams",
+    rank: "",
     image: achievementPhoto("KakaoTalk_20260829_190154401.jpg"),
     specs: [
       { label: "Engine", value: "321cc DOHC" },
