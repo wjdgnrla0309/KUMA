@@ -8,42 +8,75 @@ export type GalleryPreview = GalleryPhoto & {
   alt: string;
 };
 
-// 사진 파일은 public/cars에 두고, src에는 public을 제외한 경로를 적습니다.
-const TEST_DAY_PHOTO = "/cars/KUMA_testdriveing_filmcam.jpg";
-const COMPETITION_DAY_PHOTO = "/cars/KakaoTalk_20260829_190154401.jpg";
+// GitHub Pages의 /KUMA/ 경로까지 자동 대응
+const BASE = import.meta.env.BASE_URL;
 
-// 홈페이지에 먼저 보여줄 대표 사진과 한국어 설명입니다.
+const carPhoto = (year: string, file: string) =>
+  `${BASE}cars/${year}/${file}`;
+
+
+// ─────────────────────────────
+// 홈페이지 대표 사진
+// ─────────────────────────────
+
 export const GALLERY_PREVIEWS: GalleryPreview[] = [
   {
-    src: TEST_DAY_PHOTO,
+    src: carPhoto("2026", "001.webp"),
     alt: "KUMA 차량 테스트 주행",
     category: "TEST DAY",
     title: "차량 테스트 주행",
   },
+
   {
-    src: COMPETITION_DAY_PHOTO,
+    src: carPhoto("2025", "001.webp"),
     alt: "KUMA 차량 대회 주행 모습",
     category: "COMPETITION DAY",
     title: "대회 주행 기록",
   },
 ];
 
-// /gallery 연도별 사진 목록: 빈 배열인 연도에는 준비 중 안내가 표시됩니다.
+
+// ─────────────────────────────
+// 연도별 갤러리
+// ─────────────────────────────
+
 export const PHOTO_ARCHIVE: Record<string, GalleryPhoto[]> = {
   "2026": [
-    { src: TEST_DAY_PHOTO, title: "Test Day", category: "Vehicle Testing" },
+    {
+      src: carPhoto("2026", "001.webp"),
+      title: "Test Day",
+      category: "Vehicle Testing",
+    },
+    {
+      src: carPhoto("2026", "002.webp"),
+      title: "Test Day",
+      category: "Vehicle Testing",
+    },
+    {
+      src: carPhoto("2026", "003.webp"),
+      title: "Test Day",
+      category: "Vehicle Testing",
+    },
   ],
+
   "2025": [
     {
-      src: COMPETITION_DAY_PHOTO,
+      src: carPhoto("2025", "001.webp"),
+      title: "Competition Day",
+      category: "Race Weekend",
+    },
+    {
+      src: carPhoto("2025", "002.webp"),
       title: "Competition Day",
       category: "Race Weekend",
     },
   ],
+
   "2024": [],
 };
 
-// 연도를 추가하면 필터에도 최신순으로 자동 반영됩니다.
+
+// 최신 연도부터 자동 정렬
 export const GALLERY_YEARS = Object.keys(PHOTO_ARCHIVE).sort(
-  (first, second) => Number(second) - Number(first),
+  (first, second) => Number(second) - Number(first)
 );
