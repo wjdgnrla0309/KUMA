@@ -1,5 +1,6 @@
 import { Clock, Layers, Lock, Timer, Zap } from "lucide-react";
 import { ClassifiedSpecCard } from "../components/ClassifiedSpecCard";
+import { HOMEPAGE_CONTENT } from "../data/homepage";
 import { SITE_BASE_URL, VEHICLE_REVEAL_DATE } from "../data/site";
 import { useCountdown } from "../hooks/useCountdown";
 
@@ -23,15 +24,15 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
       <div className="relative z-10 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-racing-green/40 text-xs font-mono text-zinc-300 mb-6">
         <span className="w-2 h-2 rounded-full bg-racing-green animate-pulse"></span>
         <span>
-          <span className="text-racing-green font-semibold">KUMA 2027 DEVELOPMENT PROGRAM</span>
+          <span className="text-racing-green font-semibold">{HOMEPAGE_CONTENT.hero.programLabel}</span>
           <span> · IN PROGRESS</span>
         </span>
       </div>
 
       <h1 className="relative z-10 text-4xl md:text-6xl font-black tracking-[-0.05em] text-white max-w-4xl leading-[0.98]">
-        PRECISION ENGINEERING <br />
+        {HOMEPAGE_CONTENT.hero.titleLineOne} <br />
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-racing-green to-racing-blue">
-          UNCOMPROMISING SPEED<span className="text-racing-green"></span>
+          {HOMEPAGE_CONTENT.hero.titleLineTwo}<span className="text-racing-green"></span>
         </span>
       </h1>
 
@@ -87,7 +88,7 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
 
       <div className="relative mt-12 w-full max-w-4xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl">
         <img
-          src={`${SITE_BASE_URL}cars/KUMA_testdriveing_filmcam.jpg`}
+          src={`${SITE_BASE_URL}${HOMEPAGE_CONTENT.hero.image}`}
           alt="KUMA 2027 개발 차량을 암시하는 테스트 주행 모습"
           className="h-[400px] w-full object-cover brightness-[0.22] contrast-125 grayscale transition-transform duration-500 hover:scale-105 hover:brightness-[0.3]"
         />
@@ -106,7 +107,7 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
         </div>
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5 text-left md:p-7">
           <div>
-            <span className="text-[10px] font-mono tracking-[0.24em] text-racing-green">NEXT VEHICLE / 2027</span>
+            <span className="text-[10px] font-mono tracking-[0.24em] text-racing-green">{HOMEPAGE_CONTENT.hero.vehicleLabel}</span>
             <p className="mt-2 text-xl font-black tracking-[-0.04em] text-white md:text-3xl">KUN-F27은 곧 공개됩니다.</p>
           </div>
           <span className="text-6xl font-black leading-none text-white/90 md:text-8xl"></span>

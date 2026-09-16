@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SectionHeader } from "../components/SectionHeader";
 import { VehicleDetailPanel } from "../components/VehicleDetailPanel";
+import { HOMEPAGE_CONTENT } from "../data/homepage";
 import { VEHICLE_DATABASE, VEHICLE_YEARS, type VehicleData, type VehicleYear } from "../data/specs";
 
 type VehicleSpecsSectionProps = {
@@ -14,18 +15,13 @@ export function RecruitmentCard() {
     <aside className="mb-2 overflow-hidden rounded-3xl border border-racing-green/40 bg-zinc-950 shadow-[0_0_32px_rgba(36,198,126,0.08)]">
       <div className="grid md:grid-cols-[minmax(0,1fr)_260px]">
         <div className="p-6 md:p-8">
-          <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-racing-green">2027 DEVELOPMENT PROGRAM</span>
-          <h3 className="mt-3 text-3xl font-black tracking-[-0.06em] text-white md:text-4xl">KNU-F27 / NEXT VEHICLE</h3>
+          <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-racing-green">{HOMEPAGE_CONTENT.recruitment.programLabel}</span>
+          <h3 className="mt-3 text-3xl font-black tracking-[-0.06em] text-white md:text-4xl">{HOMEPAGE_CONTENT.recruitment.title}</h3>
           <p className="mt-4 max-w-[58ch] text-[clamp(0.95rem,1.5vw,1.125rem)] leading-[1.8] tracking-[-0.02em] text-zinc-300 [word-break:keep-all] sm:mt-5">
             KUMA의 다음 차량은 현재 개발 중입니다. 신규부원과 함께 설계부터 제작, 테스트까지 2027 시즌을 만들어 갑니다.
           </p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {[
-              ["TARGET WEIGHT", "TBA"],
-              ["POWERTRAIN", "TBA"],
-              ["AERO PACKAGE", "IN DEVELOPMENT"],
-              ["SEASON", "2027"],
-            ].map(([label, value]) => (
+            {HOMEPAGE_CONTENT.recruitment.highlights.map(([label, value]) => (
               <div key={label} className="rounded-xl border border-zinc-800 bg-zinc-900/70 p-3">
                 <span className="block text-[9px] font-mono tracking-[0.14em] text-zinc-500">{label}</span>
                 <span className="mt-2 block text-sm font-bold text-white">{value}</span>
@@ -36,7 +32,7 @@ export function RecruitmentCard() {
 
         <div className="flex flex-col items-center justify-center border-t border-zinc-800 bg-white p-6 text-center md:border-l md:border-t-0">
           <img
-            src={`${import.meta.env.BASE_URL}recruitment-qr.png.png`}
+            src={`${import.meta.env.BASE_URL}${HOMEPAGE_CONTENT.recruitment.qrImage}`}
             alt="KUMA 신규부원 지원 QR 코드"
             className="h-44 w-44 rounded-sm object-contain"
           />

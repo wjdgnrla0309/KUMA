@@ -1,4 +1,5 @@
 import { SectionHeader } from "../components/SectionHeader";
+import { HOMEPAGE_CONTENT } from "../data/homepage";
 
 // 팀 소개: 동아리의 제작 방식, 교육 목표, 주요 대회 활동을 설명합니다.
 export function AboutKumaSection() {
@@ -10,16 +11,16 @@ export function AboutKumaSection() {
       <div className="w-full">
         <figure className="group relative mb-10 h-64 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 md:h-80">
           <img
-            src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (7).jpg")}`}
-            alt="KUMA formula race car in competition"
+            src={`${import.meta.env.BASE_URL}${encodeURI(HOMEPAGE_CONTENT.about.image)}`}
+            alt={HOMEPAGE_CONTENT.about.imageAlt}
             loading="lazy"
             className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
         </figure>
         <SectionHeader
-          label="About KUMA"
-          title="Engineering With Combustion"
+          label={HOMEPAGE_CONTENT.about.label}
+          title={HOMEPAGE_CONTENT.about.title}
           className="!mt-0"
         />
         <div className="mt-6 space-y-4 text-base leading-7 text-zinc-400 md:text-lg">
