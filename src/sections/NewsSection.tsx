@@ -1,7 +1,7 @@
 import { SectionHeader } from "../components/SectionHeader";
 import { NEWS_ITEMS } from "../data/news";
+import { PAGE_COPY } from "../data/pageCopy";
 
-const NEWS_PHOTOS = ["001 (3).jpg", "001 (14).jpg", "001 (18).jpg"];
 const competitionPhoto = (file: string) =>
   `${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent(file)}`;
 
@@ -14,19 +14,19 @@ export function NewsSection() {
     >
       <div className="mb-10">
         <SectionHeader
-          label="Latest News"
-          title="KUMA NEWS"
+          label={PAGE_COPY.news.label}
+          title={PAGE_COPY.news.title}
           className="!mt-0"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {NEWS_ITEMS.map(({ date, title, description }, index) => (
+        {NEWS_ITEMS.map(({ date, title, description, image }) => (
           <article
             key={`${date}-${title}`}
             className="group overflow-hidden rounded-xl border border-zinc-800 bg-racing-card"
           >
             <img
-              src={competitionPhoto(NEWS_PHOTOS[index])}
+              src={competitionPhoto(image)}
               alt={`${title} vehicle photo`}
               loading="lazy"
               className="h-44 w-full object-cover transition duration-500 group-hover:scale-105"

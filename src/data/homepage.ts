@@ -1,10 +1,7 @@
-/**
- * Homepage quick-edit settings.
- *
- * Use this file for the content that is most often refreshed between seasons:
- * the hero, About image/title, and the recruitment card. List-style content
- * remains in its dedicated data file (news.ts, specs.ts, gallery.ts, etc.).
- */
+﻿// ============================================================
+// 🏠 홈페이지 메인 / 소개 / 모집 카드
+// 수정 → HOMEPAGE_CONTENT의 hero, about, recruitment 항목 | 목록 콘텐츠는 각 전용 data 파일에서 수정
+// ============================================================
 export const HOMEPAGE_CONTENT = {
   hero: {
     programLabel: "KUMA 2027 DEVELOPMENT PROGRAM",
@@ -31,15 +28,3 @@ export const HOMEPAGE_CONTENT = {
     ],
   },
 } as const;
-
-/** A single lookup map for the remaining homepage content. */
-export const HOMEPAGE_CONTENT_FILES = [
-  { area: "Navigation & launch date", file: "src/data/site.ts" },
-  { area: "Hero, About & recruitment", file: "src/data/homepage.ts" },
-  { area: "Vehicle specifications", file: "src/data/specs.ts" },
-  { area: "Awards & records", file: "src/data/achievements.ts" },
-  { area: "News", file: "src/data/news.ts" },
-  { area: "Gallery", file: "src/data/gallery.ts" },
-  { area: "Sponsors", file: "src/data/sponsors.ts" },
-  { area: "Contact details", file: "src/data/contact.ts" },
-] as const;

@@ -1,5 +1,10 @@
 import type { SpecItem, VehicleYear } from "./specs";
 
+// ============================================================
+// 🏁 KUMA 시즌별 성과 및 차량 기록
+// 새 기록 추가 → ACHIEVEMENTS 배열에 항목 추가 | 수정 → 시즌 / 분류 / 제목 / 설명 / 순위 / 사진 / 제원
+// ============================================================
+
 const achievementPhoto = (file: string) =>
   `${import.meta.env.BASE_URL}cars/${encodeURIComponent(file)}`;
 

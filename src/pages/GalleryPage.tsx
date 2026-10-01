@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SectionHeader } from "../components/SectionHeader";
 import { GALLERY_YEARS, PHOTO_ARCHIVE } from "../data/gallery";
 import { SITE_BASE_URL } from "../data/site";
+import { PAGE_COPY } from "../data/pageCopy";
 
 // /gallery 전용 화면: 선택한 연도의 사진 또는 등록 대기 안내를 표시합니다.
 export function GalleryPage() {
@@ -15,16 +16,16 @@ export function GalleryPage() {
           href={SITE_BASE_URL}
           className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.12em] text-zinc-400 transition hover:text-racing-green"
         >
-          ← BACK TO HOME
+          {PAGE_COPY.galleryPage.backLabel}
         </a>
         <div className="mt-8 border-b border-zinc-800 pb-9">
           <SectionHeader
-            label="Race & Workshop"
-            title="PHOTO ARCHIVE"
+            label={PAGE_COPY.galleryPage.label}
+            title={PAGE_COPY.galleryPage.title}
             className="!mt-0"
           />
           <p className="mt-4 text-sm text-zinc-400">
-            연도별 KUMA의 대회, 테스트, 제작 기록을 모아보세요.
+            {PAGE_COPY.galleryPage.description}
           </p>
         </div>
 
@@ -32,7 +33,7 @@ export function GalleryPage() {
         <div
           className="mt-8 flex flex-wrap gap-3"
           role="group"
-          aria-label="갤러리 연도 선택"
+          aria-label={PAGE_COPY.galleryPage.yearSelectLabel}
         >
           {GALLERY_YEARS.map((year) => (
             <button
@@ -77,10 +78,10 @@ export function GalleryPage() {
         ) : (
           <div className="mt-8 rounded-2xl border border-dashed border-zinc-700 bg-zinc-900/50 px-6 py-20 text-center">
             <p className="text-lg font-bold text-white">
-              {activeYear} archive is being prepared.
+              {activeYear} {PAGE_COPY.galleryPage.emptyTitle}
             </p>
             <p className="mt-2 text-sm text-zinc-500">
-              새 사진이 등록되면 이곳에서 확인할 수 있습니다.
+              {PAGE_COPY.galleryPage.emptyDescription}
             </p>
           </div>
         )}

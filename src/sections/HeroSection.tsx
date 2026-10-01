@@ -1,7 +1,7 @@
 import { Clock, Layers, Lock, Timer, Zap } from "lucide-react";
 import { ClassifiedSpecCard } from "../components/ClassifiedSpecCard";
 import { HOMEPAGE_CONTENT } from "../data/homepage";
-import { SITE_BASE_URL, VEHICLE_REVEAL_DATE } from "../data/site";
+import { HOMEPAGE_COPY, SITE_BASE_URL, VEHICLE_REVEAL_DATE } from "../data/site";
 import { useCountdown } from "../hooks/useCountdown";
 
 type HeroSectionProps = {
@@ -37,8 +37,7 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
       </h1>
 
       <p className="relative z-10 mt-6 w-full max-w-3xl text-zinc-400 text-base md:text-lg leading-7 break-keep">
-        <span className="block">2026 시즌의 기록은 끝났고, 새로운 차량의 설계는 이미 시작됐습니다.</span>
-        <span className="block">KUMA가 트랙에 꺼내 놓을 2027 머신의 모습을 가장 먼저 만나보세요.</span>
+        {HOMEPAGE_COPY.heroDescription.map((line) => <span className="block" key={line}>{line}</span>)}
       </p>
 
       <div className="relative z-10 mt-8 flex items-center gap-3 rounded-2xl border border-zinc-800 bg-zinc-900/60 px-5 py-3 md:gap-6 md:px-6">

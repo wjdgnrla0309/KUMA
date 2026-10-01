@@ -19,10 +19,21 @@ export interface VehicleData {
   specs: SpecItem[];
 }
 
+export interface Car extends VehicleData {
+  year: number;
+  name: string;
+  description: string;
+  records: string[];
+}
+
+// ============================================================
+// 🏎️ 연도별 KUMA 차량 제원
+// 새 차량 추가 → VEHICLE_DATABASE에 연도 항목 추가 | 수정 → 요약 수치와 specs 제원표를 함께 확인
+// ============================================================
+
 const vehiclePhoto = (file: string) =>
   `${import.meta.env.BASE_URL}cars/${encodeURIComponent(file)}`;
 
-// 연도를 추가하면 차량 선택 목록에도 자동으로 반영됩니다.
 export const VEHICLE_DATABASE = {
   "2026": {
     season: "2026",
@@ -118,8 +129,18 @@ export const VEHICLE_DATABASE = {
   },
 } satisfies Record<string, VehicleData>;
 
-// 데이터의 실제 키에서 타입과 목록을 만들므로 연도 목록을 따로 중복 관리하지 않습니다.
+// ============================================================
+// 차량 선택 목록 (VEHICLE_DATABASE의 연도에서 자동 생성)
+// ============================================================
 export type VehicleYear = keyof typeof VEHICLE_DATABASE;
 export const VEHICLE_YEARS = (Object.keys(VEHICLE_DATABASE) as VehicleYear[])
   .sort((first, second) => Number(second) - Number(first));
 export const DEFAULT_VEHICLE_YEAR: VehicleYear = VEHICLE_YEARS[0];
+
+export const cars: Car[] = Object.entries(VEHICLE_DATABASE).map(([year, vehicle]) => ({
+  ...vehicle,
+  year: Number(year),
+  name: vehicle.modelName,
+  description: vehicle.tagline,
+  records: [],
+}));

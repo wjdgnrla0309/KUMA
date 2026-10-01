@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeader } from "../components/SectionHeader";
 import { ACHIEVEMENTS, type Achievement } from "../data/achievements";
+import { PAGE_COPY } from "../data/pageCopy";
 
 type AchievementsSectionProps = {
   onSelectAchievement: (achievement: Achievement) => void;
@@ -13,21 +14,21 @@ export function AchievementsSection({
   return (
     <section id="achievements" className="py-20 px-6 max-w-7xl mx-auto border-t border-zinc-800">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-        <SectionHeader label="Latest Achievements" title="Awards & Records" className="!mt-0" />
-        <span className="text-sm text-zinc-500">KUMA의 시즌별 성과와 차량 데이터를 확인하세요.</span>
+        <SectionHeader label={PAGE_COPY.achievements.label} title={PAGE_COPY.achievements.title} className="!mt-0" />
+        <span className="text-sm text-zinc-500">{PAGE_COPY.achievements.description}</span>
       </div>
 
       <figure className="group relative mb-8 h-48 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 sm:h-56">
         <img
           src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (24).jpg")}`}
-          alt="KUMA team at a race weekend"
+          alt={PAGE_COPY.achievements.bannerAlt}
           loading="lazy"
           className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/20 to-transparent" />
         <figcaption className="absolute bottom-0 left-0 p-5 sm:p-6">
-          <span className="text-xs font-mono font-bold tracking-[0.2em] text-racing-green">KUMA RACING TEAM</span>
-          <p className="mt-2 text-lg font-black text-white sm:text-xl">Moments that made the season.</p>
+          <span className="text-xs font-mono font-bold tracking-[0.2em] text-racing-green">{PAGE_COPY.achievements.bannerLabel}</span>
+          <p className="mt-2 text-lg font-black text-white sm:text-xl">{PAGE_COPY.achievements.bannerTitle}</p>
         </figcaption>
       </figure>
 
@@ -60,11 +61,11 @@ export function AchievementsSection({
 
               <div className="flex shrink-0 items-end gap-5 md:gap-8">
                 <div className="text-left">
-                  <span className="block text-[10px] font-mono tracking-[0.18em] text-zinc-500 uppercase">Ranking</span>
+                  <span className="block text-[10px] font-mono tracking-[0.18em] text-zinc-500 uppercase">{PAGE_COPY.achievements.rankingLabel}</span>
                   <span className="mt-1 block text-sm font-semibold text-white md:text-base">{achievement.rank}</span>
                 </div>
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-racing-green md:text-sm">
-                  View <ArrowUpRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
+                  {PAGE_COPY.achievements.viewLabel} <ArrowUpRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
                 </span>
               </div>
             </div>

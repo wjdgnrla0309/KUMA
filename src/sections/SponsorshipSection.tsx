@@ -4,6 +4,7 @@ import type { LucideIcon } from "lucide-react";
 import { SectionHeader } from "../components/SectionHeader";
 import { SPONSOR_BENEFITS, SPONSOR_LIST } from "../data/sponsors";
 import type { Sponsor, SponsorBenefit } from "../data/sponsors";
+import { PAGE_COPY } from "../data/pageCopy";
 
 const BENEFIT_ICONS: Record<SponsorBenefit["icon"], LucideIcon> = {
   brand: Gauge,
@@ -106,8 +107,8 @@ export function SponsorshipSection() {
     >
       <div className="max-w-3xl">
         <SectionHeader
-          label="SPONSORSHIP"
-          title={"열정적인 엔지니어들과 함께\n모빌리티의 미래를 이끌어주세요."}
+          label={PAGE_COPY.sponsorship.label}
+          title={PAGE_COPY.sponsorship.title}
           className="!mt-0"
         />
       </div>
@@ -115,13 +116,13 @@ export function SponsorshipSection() {
       <figure className="group relative mt-10 h-56 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 md:h-72">
         <img
           src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (22).jpg")}`}
-          alt="KUMA race car and team at competition"
+          alt={PAGE_COPY.sponsorship.bannerAlt}
           loading="lazy"
           className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/25 to-transparent" />
         <figcaption className="absolute inset-y-0 left-0 flex max-w-sm items-end p-6 text-lg font-black tracking-[-0.04em] text-white md:p-8 md:text-2xl">
-          Partner with the team behind the car.
+          {PAGE_COPY.sponsorship.bannerCaption}
         </figcaption>
       </figure>
 
@@ -158,17 +159,17 @@ export function SponsorshipSection() {
           onClick={() => setIsSponsorListOpen((open) => !open)}
           className="inline-flex items-center justify-center rounded-xl border border-zinc-700 bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition hover:border-racing-green hover:text-racing-green"
         >
-          {isSponsorListOpen ? "스폰서 목록 닫기" : "스폰서 목록 보기"}
+          {isSponsorListOpen ? PAGE_COPY.sponsorship.closeListLabel : PAGE_COPY.sponsorship.showListLabel}
         </button>
         {/* PDF가 등록되면 실제 파일 경로를 가진 다운로드 링크로 교체합니다. */}
         <button
           type="button"
           disabled
-          title="제안서 PDF 준비 중"
+          title={PAGE_COPY.sponsorship.proposalTitle}
           className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-black transition disabled:cursor-not-allowed disabled:opacity-50"
         >
           <FileText className="mr-2 h-4 w-4" />
-          제안서 다운로드 (PDF)
+          {PAGE_COPY.sponsorship.proposalLabel}
         </button>
       </div>
 

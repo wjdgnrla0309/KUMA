@@ -10,7 +10,10 @@ export type SponsorBenefit = {
   description: string;
 };
 
-// 후원 소개 문구와 카드 순서를 이곳에서 수정합니다.
+// ============================================================
+// 🤝 후원 안내 및 혜택
+// 수정 → SPONSOR_BENEFITS의 제목 / 설명 / 표시 순서
+// ============================================================
 export const SPONSOR_BENEFITS: SponsorBenefit[] = [
   {
     icon: "brand",
@@ -32,7 +35,10 @@ export const SPONSOR_BENEFITS: SponsorBenefit[] = [
   },
 ];
 
-// 공식 후원사 목록. 로고가 없으면 이름을, URL이 없으면 링크 없는 카드를 표시합니다.
+// ============================================================
+// 🏢 공식 후원사 목록
+// 새 후원사 추가 → SPONSOR_LIST에 항목 추가 | 수정 → 이름 / 로고 / 링크
+// 로고가 없으면 이름을, URL이 없으면 링크 없는 카드로 표시합니다.
 // 로고를 추가할 때 public/sponsors에 파일을 넣고 logo: "/sponsors/파일명"을 지정합니다.
 export const SPONSOR_LIST: Sponsor[] = [
   { name: "KONGJU NAT'L UNIV", url: "https://www.kongju.ac.kr" },

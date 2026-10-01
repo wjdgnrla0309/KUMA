@@ -32,7 +32,7 @@ export function HomePage() {
 
       {/* 화면에서 보이는 순서대로 섹션을 배치합니다. */}
       <main>
-        <div className="mx-auto max-w-7xl px-6 pt-24">
+        <div className="fixed left-4 top-28 z-30 hidden md:block lg:left-8">
           <RecruitmentCard />
         </div>
         <HeroSection onOpenDecrypt={() => setIsDecryptOpen(true)} />

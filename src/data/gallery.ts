@@ -15,9 +15,10 @@ const competitionPhoto = (file: string) =>
   `${BASE}cars/2026/competition/${encodeURIComponent(file)}`;
 
 
-// ─────────────────────────────
-// 홈페이지 대표 사진
-// ─────────────────────────────
+// ============================================================
+// 📸 홈페이지 대표 사진
+// 새 사진 추가 → GALLERY_PREVIEWS 배열에 항목 추가 | 수정 → 사진 경로 / 대체 문구 / 분류 / 제목
+// ============================================================
 
 export const GALLERY_PREVIEWS: GalleryPreview[] = [
   {
@@ -48,13 +49,14 @@ export const GALLERY_PREVIEWS: GalleryPreview[] = [
 ];
 
 
-// ─────────────────────────────
-// 연도별 갤러리
-// ─────────────────────────────
+// ============================================================
+// 🗓️ 연도별 사진 보관함
+// 새 연도 추가 → PHOTO_ARCHIVE에 연도 키 추가 | 수정 → 연도와 사진 목록
+// ============================================================
 
 export const PHOTO_ARCHIVE: Record<string, GalleryPhoto[]> = {
   "2026": Array.from({ length: 24 }, (_, index) => {
-    const file = `KakaoTalk_20260829_190154401 (${index + 1}).jpg`;
+    const file = `001 (${index + 1}).jpg`;
 
     return {
       src: competitionPhoto(file),
@@ -69,7 +71,9 @@ export const PHOTO_ARCHIVE: Record<string, GalleryPhoto[]> = {
 };
 
 
-// 최신 연도부터 자동 정렬
+// ============================================================
+// 갤러리 연도 선택 목록 (최신 연도부터 자동 정렬)
+// ============================================================
 export const GALLERY_YEARS = Object.keys(PHOTO_ARCHIVE).sort(
   (first, second) => Number(second) - Number(first)
 );
