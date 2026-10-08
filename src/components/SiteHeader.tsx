@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Lock, Menu, X } from "lucide-react";
-import { NAVIGATION_LINKS, SITE_BASE_URL } from "../data/site";
+import kumaLogo from "../../KUMA LOGO.webp";
+import { NAVIGATION_LINKS } from "../data/site";
 
 type SiteHeaderProps = { onOpenDecrypt: () => void };
 
@@ -12,10 +13,12 @@ export function SiteHeader({ onOpenDecrypt }: SiteHeaderProps) {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center">
         <a href="#top" className="flex shrink-0 items-center gap-4" aria-label="Go to KUMA Racing home">
           <img
-            src={`${SITE_BASE_URL}kuma-logo.svg`}
+            src={kumaLogo}
             alt="KUMA Racing"
             className="h-10 w-10 object-contain"
+            onError={(event) => { event.currentTarget.src = "/kuma-logo.svg"; }}
           />
+          <span className="text-lg font-black tracking-[-0.08em] text-white leading-none">KUMA</span>
         </a>
 
         <nav className="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-semibold tracking-[0.08em] text-zinc-400">
