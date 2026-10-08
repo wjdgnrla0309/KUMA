@@ -35,6 +35,11 @@ jobs:
       - name: Build Vite site
         run: npm run build
 
+      - name: Create gallery entry for GitHub Pages
+        run: |
+          mkdir -p dist/gallery
+          cp dist/index.html dist/gallery/index.html
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
