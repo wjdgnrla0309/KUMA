@@ -19,13 +19,6 @@ export interface VehicleData {
   specs: SpecItem[];
 }
 
-export interface Car extends VehicleData {
-  year: number;
-  name: string;
-  description: string;
-  records: string[];
-}
-
 // ============================================================
 // 🏎️ 연도별 KUMA 차량 제원
 // 새 차량 추가 → VEHICLE_DATABASE에 연도 항목 추가 | 수정 → 요약 수치와 specs 제원표를 함께 확인
@@ -136,11 +129,3 @@ export type VehicleYear = keyof typeof VEHICLE_DATABASE;
 export const VEHICLE_YEARS = (Object.keys(VEHICLE_DATABASE) as VehicleYear[])
   .sort((first, second) => Number(second) - Number(first));
 export const DEFAULT_VEHICLE_YEAR: VehicleYear = VEHICLE_YEARS[0];
-
-export const cars: Car[] = Object.entries(VEHICLE_DATABASE).map(([year, vehicle]) => ({
-  ...vehicle,
-  year: Number(year),
-  name: vehicle.modelName,
-  description: vehicle.tagline,
-  records: [],
-}));
