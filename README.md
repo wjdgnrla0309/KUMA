@@ -144,7 +144,7 @@ Vite 개발 서버는 [server/contact-middleware.ts](server/contact-middleware.t
 
 ## 확인이 필요한 현재 콘텐츠
 
-- [contact.ts](src/data/contact.ts): 팀장·회장이 모두 `홍길동`, 전화번호가 `010-1234-5678`로 되어 있습니다.
+- [contact.ts](src/data/contact.ts): 팀장·회장이 모두 `홍길동`, 전화번호가 `010-1234-5678`로 되어 있습니다. 수정 필요합니다.
 - [specs.ts](src/data/specs.ts) / [achievements.ts](src/data/achievements.ts): 2026년 요약은 `100 ps`·`201 km/h`, 상세 제원 출력은 `50 ps`, 성과 기록은 `50 PS`·`131 km/h`입니다. 현재 수치를 유지했으므로 실제 기록 확인 후 맞춰야 합니다.
 - [SponsorshipSection.tsx](src/sections/SponsorshipSection.tsx): 제안서 PDF가 등록되지 않아 다운로드 버튼이 비활성 상태입니다.
 
