@@ -31,8 +31,8 @@ export function HomePage() {
       <SiteHeader onOpenDecrypt={() => setIsDecryptOpen(true)} />
 
       {/* 화면에서 보이는 순서대로 섹션을 배치합니다. */}
-      <main>
-        <div className="mx-auto max-w-7xl px-6 pt-24">
+      <main className="relative">
+        <div className="pointer-events-none absolute inset-x-0 top-24 z-20 mx-auto max-w-7xl px-6">
           <RecruitmentCard />
         </div>
         <HeroSection onOpenDecrypt={() => setIsDecryptOpen(true)} />

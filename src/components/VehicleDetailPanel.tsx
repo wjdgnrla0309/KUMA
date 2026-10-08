@@ -24,7 +24,7 @@ export function VehicleDetailPanel({
             <div className="flex items-center justify-between gap-3">
               <div>
                 <p className="text-[10px] font-mono tracking-[0.22em] uppercase text-racing-green">{selectedVehicle.carNumber}</p>
-                <h3 className="mt-2 text-2xl font-black tracking-[-0.05em] text-white">{selectedVehicle.modelName}</h3>
+                <h3 className={`mt-2 text-2xl font-black tracking-[-0.05em] text-white ${/[가-힣]/.test(selectedVehicle.modelName) ? "" : "heading-english"}`}>{selectedVehicle.modelName}</h3>
               </div>
               <span className="rounded-full border border-white/20 bg-black/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-100">
                 {selectedYear}

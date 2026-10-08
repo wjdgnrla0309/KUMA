@@ -21,7 +21,7 @@ export function DecryptModal({ onClose }: DecryptModalProps) {
         <div className="mb-4 flex items-center gap-3 text-red-500">
           <ShieldAlert className="h-8 w-8" />
           <div>
-            <h3 id="decrypt-title" className="font-mono text-lg font-black tracking-wider">ERROR 403: ACCESS DENIED</h3>
+            <h3 id="decrypt-title" className="heading-english text-lg">ERROR 403: ACCESS DENIED</h3>
             <span className="text-[11px] font-mono text-zinc-500">CLEARANCE LEVEL 3 REQUIRED</span>
           </div>
         </div>

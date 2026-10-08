@@ -7,6 +7,18 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Bebas Neue"', '"A2Z"', 'sans-serif'],
+        mono: ['"Bebas Neue"', '"A2Z"', 'sans-serif'],
+        display: ['"Bebas Neue"', '"A2Z"', 'sans-serif'],
+      },
+      fontWeight: {
+        medium: '400',
+        semibold: '500',
+        bold: '500',
+        extrabold: '600',
+        black: '600',
+      },
       colors: {
         racing: {
           // 강조색 / 보조 강조색 / 페이지 배경 / 카드 배경

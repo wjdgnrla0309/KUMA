@@ -13,7 +13,7 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
   const timeLeft = useCountdown(VEHICLE_REVEAL_DATE);
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
+    <section className="relative overflow-hidden pt-60 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center sm:pt-24">
       <div className="pointer-events-none absolute -right-8 top-16 select-none text-[18rem] font-black leading-none text-white/[0.025] md:right-16 md:top-8 md:text-[28rem]">
         ?
       </div>
@@ -29,7 +29,7 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
         </span>
       </div>
 
-      <h1 className="relative z-10 text-4xl md:text-6xl font-black tracking-[-0.05em] text-white max-w-4xl leading-[0.98]">
+      <h1 className="relative z-10 text-4xl md:text-6xl text-white max-w-4xl">
         {HOMEPAGE_CONTENT.hero.titleLineOne} <br />
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-racing-green to-racing-blue">
           {HOMEPAGE_CONTENT.hero.titleLineTwo}<span className="text-racing-green"></span>
@@ -52,7 +52,7 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
             [timeLeft.seconds, "SEC"],
           ].map(([value, label], index) => (
             <div key={label} className="text-center">
-              <span className={`text-xl font-black md:text-2xl ${index === 3 ? "text-racing-green" : "text-white"}`}>
+              <span className={`font-display text-2xl font-normal tracking-[0.05em] md:text-3xl ${index === 3 ? "text-racing-green" : "text-white"}`}>
                 {String(value).padStart(index === 0 ? 1 : 2, "0")}
               </span>
               <span className="block text-[9px] text-zinc-500">{label}</span>

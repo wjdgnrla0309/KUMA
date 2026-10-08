@@ -16,7 +16,7 @@ export function AchievementModal({ achievement, onClose, onSelectVehicle }: Achi
         <div className="flex items-center justify-between border-b border-zinc-800 px-5 py-4">
           <div>
             <p className="text-[10px] font-mono tracking-[0.2em] text-racing-green uppercase">{achievement.season}</p>
-            <h3 id="achievement-title" className="mt-1 text-xl font-bold text-white">{achievement.title}</h3>
+            <h3 id="achievement-title" className={`mt-1 text-xl font-bold text-white ${/[가-힣]/.test(achievement.title) ? "" : "heading-english"}`}>{achievement.title}</h3>
           </div>
           <button
             type="button"

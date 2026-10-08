@@ -11,7 +11,7 @@ export function InstagramFeedSection() {
       <div className="max-w-7xl mx-auto px-6 mb-6 flex items-center justify-between gap-4">
         <div>
           <span className="text-xs font-mono text-racing-green tracking-widest uppercase">{PAGE_COPY.instagram.followLabel}</span>
-          <h2 className="text-3xl font-black tracking-[-0.06em] text-white mt-1">{PAGE_COPY.instagram.title}</h2>
+          <h2 className="text-3xl text-white mt-1">{PAGE_COPY.instagram.title}</h2>
         </div>
         <a
           href={INSTAGRAM_URL}

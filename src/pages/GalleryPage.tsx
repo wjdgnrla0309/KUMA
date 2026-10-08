@@ -68,7 +68,7 @@ export function GalleryPage() {
                   <span className="text-[10px] font-mono font-bold tracking-[0.18em] text-racing-green">
                     {photo.category}
                   </span>
-                  <h2 className="mt-2 text-lg font-black text-white">
+                  <h2 className={`mt-2 text-lg text-white ${/[가-힣]/.test(photo.title) ? "heading-korean" : ""}`}>
                     {photo.title}
                   </h2>
                 </figcaption>

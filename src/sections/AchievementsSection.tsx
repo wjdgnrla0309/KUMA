@@ -18,19 +18,10 @@ export function AchievementsSection({
         <span className="text-sm text-zinc-500">{PAGE_COPY.achievements.description}</span>
       </div>
 
-      <figure className="group relative mb-8 h-48 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 sm:h-56">
-        <img
-          src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (24).jpg")}`}
-          alt={PAGE_COPY.achievements.bannerAlt}
-          loading="lazy"
-          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/20 to-transparent" />
-        <figcaption className="absolute bottom-0 left-0 p-5 sm:p-6">
-          <span className="text-xs font-mono font-bold tracking-[0.2em] text-racing-green">{PAGE_COPY.achievements.bannerLabel}</span>
-          <p className="mt-2 text-lg font-black text-white sm:text-xl">{PAGE_COPY.achievements.bannerTitle}</p>
-        </figcaption>
-      </figure>
+      <div className="mb-6">
+        <span className="text-xs font-mono font-medium tracking-[0.2em] text-racing-green">{PAGE_COPY.achievements.bannerLabel}</span>
+        <p className="mt-2 text-lg font-medium text-white sm:text-xl">{PAGE_COPY.achievements.bannerTitle}</p>
+      </div>
 
       <div className="space-y-5">
         {ACHIEVEMENTS.map((achievement) => (
@@ -55,7 +46,7 @@ export function AchievementsSection({
                   <span className="text-[10px] font-mono tracking-[0.18em] text-zinc-500 uppercase">{achievement.category}</span>
                 </div>
 
-                <h3 className="text-xl font-black tracking-[-0.04em] text-white md:text-2xl">{achievement.title}</h3>
+                <h3 className={`text-xl font-black tracking-[-0.04em] text-white md:text-2xl ${/[가-힣]/.test(achievement.title) ? "" : "heading-english"}`}>{achievement.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-zinc-400 md:text-base">{achievement.short}</p>
               </div>
 

@@ -45,7 +45,7 @@ export function GallerySection() {
               <span className="text-xs font-mono text-racing-green">
                 {photo.category}
               </span>
-              <h3 className="text-lg font-black tracking-[-0.03em] text-white mt-1">
+              <h3 className={`text-lg font-black tracking-[-0.03em] text-white mt-1 ${/[가-힣]/.test(photo.title) ? "" : "heading-english"}`}>
                 {photo.title}
               </h3>
             </figcaption>

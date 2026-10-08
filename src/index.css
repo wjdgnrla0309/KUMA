@@ -5,6 +5,89 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 로컬 글꼴은 Vite가 /KUMA/ 배포 경로에 맞춰 함께 번들링합니다. */
+@font-face {
+  font-family: "A2Z";
+  src: url("./assets/fonts/A2Z-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "A2Z";
+  src: url("./assets/fonts/A2Z-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "A2Z";
+  src: url("./assets/fonts/A2Z-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "A2Z";
+  src: url("./assets/fonts/A2Z-700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "A2Z";
+  src: url("./assets/fonts/A2Z-800.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "A2Z";
+  src: url("./assets/fonts/A2Z-900.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  /* 차량명과 영문 수치 표기의 숫자·하이픈도 같은 글꼴로 표시합니다. */
+  unicode-range: U+002D, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+    letter-spacing: 0.06em;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* 기존 유틸리티보다 우선해 제목의 과도한 음수 자간을 정리합니다. */
+h1, h2 {
+  font-family: "Bebas Neue", "A2Z", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  line-height: 1.12;
+}
+
+h3.heading-english {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+}
+
+/* 한글이 포함된 긴 제목은 본문 계열의 굵기와 자연스러운 자간을 사용합니다. */
+.heading-korean {
+  font-family: "Bebas Neue", "A2Z", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
 /* 페이지 공통 동작만 둡니다. 섹션별 애니메이션은 styles에서 수정합니다. */
 html {
   scroll-behavior: smooth;

@@ -18,10 +18,10 @@ export function SiteHeader({ onOpenDecrypt }: SiteHeaderProps) {
             className="h-10 w-10 object-contain"
             onError={(event) => { event.currentTarget.src = "/kuma-logo.svg"; }}
           />
-          <span className="text-lg font-black tracking-[-0.08em] text-white leading-none">KUMA</span>
+          <span className="font-display text-2xl font-normal tracking-[0.08em] text-white leading-none">KUMA</span>
         </a>
 
-        <nav className="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-semibold tracking-[0.08em] text-zinc-400">
+        <nav className="hidden md:flex flex-1 items-center justify-center gap-4 lg:gap-8 text-base lg:text-lg font-semibold tracking-[0.08em] text-zinc-400">
           {NAVIGATION_LINKS.map(({ label, href }) => (
             <a key={href} href={href} className="hover:text-white transition-colors">{label}</a>
           ))}
@@ -38,7 +38,7 @@ export function SiteHeader({ onOpenDecrypt }: SiteHeaderProps) {
       </div>
       {isMobileMenuOpen && (
         <nav className="md:hidden border-t border-zinc-800 bg-zinc-950 px-6 py-4">
-          <div className="flex flex-col gap-4 text-sm font-medium text-zinc-300">
+          <div className="flex flex-col gap-4 text-lg font-medium text-zinc-300">
             {NAVIGATION_LINKS.map(({ label, href }) => (
               <a key={href} href={href} onClick={() => setIsMobileMenuOpen(false)} className="border-b border-zinc-800/70 pb-3 hover:text-racing-green transition-colors">{label}</a>
             ))}
