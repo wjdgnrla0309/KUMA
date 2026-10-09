@@ -35,7 +35,7 @@ export function AchievementsSection({
               <img
                 src={achievement.image}
                 alt={achievement.title}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className={`h-full w-full ${["2023", "2024"].includes(achievement.season) ? "object-contain" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
               />
             </div>
 

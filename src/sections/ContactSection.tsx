@@ -29,7 +29,7 @@ export function ContactSection() {
             </div>
             <div className="flex items-center gap-3 text-zinc-300">
               <Mail className="w-5 h-5 text-racing-green shrink-0" aria-hidden="true" />
-              <span>{CONTACT_DETAILS.email}</span>
+              <span className="font-['A2Z',sans-serif] normal-case tracking-normal">{CONTACT_DETAILS.email}</span>
             </div>
             <div className="flex items-start gap-3 text-zinc-300">
               <Phone className="w-5 h-5 text-racing-green shrink-0" aria-hidden="true" />

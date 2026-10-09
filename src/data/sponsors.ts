@@ -2,8 +2,10 @@ export type Sponsor = {
   name: string;
   logo?: string;
   logoScale?: number;
+  textScale?: number;
   logoTreatment?: "light-background" | "dark-background";
   url?: string;
+  linkLabel?: string;
 };
 
 export type SponsorBenefit = {
@@ -72,11 +74,16 @@ export const SPONSOR_LIST: Sponsor[] = [
     logoTreatment: "light-background",
     url: "https://www.aimsak.com",
   },
-  { name: "대흥샤링" },
+  {
+    name: "대흥샤링",
+    url: `https://map.naver.com/p/search/${encodeURIComponent("충남 천안시 서북구 천안대로 1321-15")}`,
+    linkLabel: "대흥샤링 네이버지도 위치 보기 — 충남 천안시 서북구 천안대로 1321-15 (신당동 565-3)",
+  },
   { name: "MSC SOFTWARE", logo: "/logos/msc-software.svg", url: "https://mscsoftware.co.kr/" },
   { name: "CALSPAN", logo: "/logos/calspan.svg", url: "https://www.calspan.com" },
   {
     name: "BANGERS",
+    textScale: 1.8,
     url: "https://www.instagram.com/bangers966?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==",
   },
   { name: "CANE CREEK", logo: "/logos/cane-creek.jpg", logoScale: 1, logoTreatment: "light-background", url: "https://canecreek.com" },

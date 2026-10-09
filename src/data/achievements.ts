@@ -54,12 +54,21 @@ export const ACHIEVEMENTS: Achievement[] = [
     title: "Powertrain",
     short: "엔진 세팅과 제어 최적화를 통해 트랙 대응력을 높였습니다.",
     rank: "",
-    image: achievementPhoto("KakaoTalk_20260829_190154401.jpg"),
+    image: achievementPhoto("KUMA_2024.png"),
     specs: [
       { label: "Engine", value: "321cc DOHC" },
       { label: "Power", value: "45 PS" },
       { label: "Top Speed", value: "121 km/h" },
       { label: "Class", value: "Formula" },
     ],
+  },
+  {
+    season: "2023",
+    category: "Competition",
+    title: "KNU-F23",
+    short: "2023 FSK 금상 수상",
+    rank: "금상",
+    image: achievementPhoto("KUMA_2023.png"),
+    specs: [],
   },
 ];

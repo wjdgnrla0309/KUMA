@@ -78,7 +78,7 @@ export const VEHICLE_DATABASE = {
   },
   "2024": {
     season: "2024",
-    image: vehiclePhoto("KUMA_testdriveing_filmcam.jpg"),
+    image: `${import.meta.env.BASE_URL}cars/2024/competition/1727740718960.jpg`,
     carNumber: "No. 12",
     modelName: "KNU-F24",
     tagline: "내연기관 파워트레인과 공력 패키지의 기본기를 다진 모델",
@@ -100,7 +100,7 @@ export const VEHICLE_DATABASE = {
   },
   "2023": {
     season: "2023",
-    image: vehiclePhoto("KakaoTalk_20260829_190154401.jpg"),
+    image: `${import.meta.env.BASE_URL}cars/2023/competition/IMG_6344.JPG`,
     carNumber: "No. 11",
     modelName: "KNU-F23",
     tagline: "내연기관 파워트레인과 공력 패키지의 기본기를 다진 모델",

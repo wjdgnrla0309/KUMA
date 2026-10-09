@@ -20,7 +20,7 @@ function SponsorIdentity({
 }) {
   const [hasError, setHasError] = useState(false);
 
-  if (!sponsor.logo || hasError) return <span>{sponsor.name}</span>;
+  if (!sponsor.logo || hasError) return <span style={sponsor.textScale ? { fontSize: `${sponsor.textScale}em` } : undefined}>{sponsor.name}</span>;
 
   return (
     <span className="sponsor-logo-frame">
@@ -80,7 +80,7 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor; }) {
       href={sponsor.url}
       target="_blank"
       rel="noreferrer"
-      aria-label={`${sponsor.name} 공식 사이트 열기`}
+      aria-label={sponsor.linkLabel ?? `${sponsor.name} 공식 사이트 열기`}
       className={className}
     >
       {content}
@@ -101,7 +101,7 @@ export function SponsorshipSection() {
         <SectionHeader
           label={PAGE_COPY.sponsorship.label}
           title={PAGE_COPY.sponsorship.title}
-          className="!mt-0"
+          className="!mt-0 [&>h2]:tracking-[0.015em]"
         />
       </div>
 

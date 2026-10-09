@@ -29,7 +29,7 @@ export function GallerySection() {
           {PAGE_COPY.gallery.viewAllLabel} <ArrowUpRight className="h-4 w-4" />
         </a>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {GALLERY_PREVIEWS.map((photo) => (
           <figure
             key={photo.src}
@@ -39,9 +39,9 @@ export function GallerySection() {
               src={photo.src}
               alt={photo.alt}
               loading="lazy"
-              className="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <figcaption className="p-5">
+            <figcaption className="p-4">
               <span className="text-xs font-mono text-racing-green">
                 {photo.category}
               </span>
