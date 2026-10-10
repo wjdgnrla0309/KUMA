@@ -84,8 +84,35 @@ export const PHOTO_ARCHIVE: Record<string, GalleryPhoto[]> = {
       category: "Workshop & Preparation",
     })),
   ],
-  "2025": [],
-
+  "2025": [
+    ...[
+      ["025 formula student korea day3-151.jpg", "빗길 위의 정면 돌파"],
+      ["025 formula student korea day3-155.jpg", "젖은 코너를 가르는 17번 머신"],
+      ["025 formula student korea day3-202.jpg", "트랙에 비친 KUMA"],
+      ["025 formula student korea day3-401.jpg", "빗속에서도 이어지는 질주"],
+      ["025 formula student korea day3-423.jpg", "물보라를 가르며 달리다"],
+      ["2025 formula student korea day2-1304.jpg", "출발을 앞둔 17번 머신"],
+      ["2025 formula student korea day2-1317.jpg", "관중 앞을 달리는 KUMA"],
+      ["2025 formula student korea day2-1322.jpg", "콘 사이를 파고드는 순간"],
+      ["167A2749.JPG", "해 질 무렵의 트랙"],
+      ["167A2048.JPG", "트랙 밖에서도 함께하는 팀"],
+    ].map(([file, title]) => ({
+      src: `${BASE}cars/2025/competition/${encodeURIComponent(file)}`,
+      title,
+      category: "Competition Day",
+    })),
+    ...[
+      ["2025 formula student korea day1-371.jpg", "피트에서 이어지는 차량 점검"],
+      ["167A1968.JPG", "출전 전, 함께 살피는 머신"],
+      ["167A1988.JPG", "드라이버와 크루의 출전 준비"],
+      ["167A2751.JPG", "주행을 앞둔 드라이버 점검"],
+      ["167A4367.JPG", "빗속에서 함께 옮기는 차량"],
+    ].map(([file, title]) => ({
+      src: `${BASE}cars/2025/competition/${encodeURIComponent(file)}`,
+      title,
+      category: "Workshop & Preparation",
+    })),
+  ],
   "2024": [
     ...[
       ["1727440030866-4.jpg", "2024 FSK 출전을 준비하는 KUMA 팀"],

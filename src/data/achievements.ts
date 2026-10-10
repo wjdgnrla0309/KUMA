@@ -40,7 +40,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     title: "KNU-F25",
     short: "주행 성능 데이터 기반으로 공력과 안정성을 개선했습니다.",
     rank: "14 / 55 teams",
-    image: achievementPhoto("KakaoTalk_20260829_190154401.jpg"),
+    image: `${import.meta.env.BASE_URL}cars/2025/KUMA_2025.png`,
     specs: [
       { label: "Engine", value: "321cc DOHC" },
       { label: "Power", value: "48 PS" },

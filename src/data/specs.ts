@@ -56,7 +56,7 @@ export const VEHICLE_DATABASE = {
   },
   "2025": {
     season: "2025",
-    image: vehiclePhoto("KakaoTalk_20260829_190154401.jpg"),
+    image: `${import.meta.env.BASE_URL}cars/2025/competition/${encodeURIComponent("025 formula student korea day3-155.jpg")}`,
     carNumber: "No. 13",
     modelName: "KNU-F25",
     tagline: "내연기관 파워트레인과 공력 패키지의 기본기를 다진 모델",
