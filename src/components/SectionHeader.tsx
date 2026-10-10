@@ -11,10 +11,11 @@ export function SectionHeader({ label, title, align = "left", className = "" }: 
 
   return (
     <div className={`${alignment} ${className}`}>
-      <span className="inline-flex items-center rounded-full border border-zinc-700 bg-zinc-900 px-3 py-1 text-[11px] font-bold tracking-[0.28em] text-zinc-300 uppercase">
+      <span className={`inline-flex items-center gap-3 text-[11px] font-bold tracking-[0.32em] text-racing-green uppercase ${align === "center" ? "justify-center" : ""}`}>
+        <span className="h-px w-8 bg-gradient-to-r from-racing-green to-racing-blue" aria-hidden="true" />
         {label}
       </span>
-      <h2 className={`mt-6 text-2xl text-white whitespace-pre-line md:text-4xl lg:text-5xl ${/[가-힣]/.test(title) ? "heading-korean" : ""}`}>
+      <h2 className={`mt-4 text-3xl text-white whitespace-pre-line md:text-4xl lg:text-5xl ${/[가-힣]/.test(title) ? "heading-korean" : ""}`}>
         {title}
       </h2>
     </div>

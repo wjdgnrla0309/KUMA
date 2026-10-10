@@ -6,7 +6,8 @@ export const SITE_BASE_URL = import.meta.env.BASE_URL;
 
 export const NAVIGATION_LINKS = [
   { label: "ABOUT US", href: "#about" },
-  { label: "COMPETITION", href: "#competition" },
+  { label: "VEHICLE", href: "#competition" },
+  { label: "AWARDS", href: "#achievements" },
   { label: "NEWS", href: "#news" },
   { label: "GALLERY", href: `${SITE_BASE_URL}gallery` },
   { label: "SPONSORS", href: "#sponsors" },
@@ -22,8 +23,11 @@ export const VEHICLE_REVEAL_DATE = "2027-08-27T00:00:00";
 // ============================================================
 export const HOMEPAGE_COPY = {
   heroDescription: [
-    "2026 시즌의 기록은 끝났고, 새로운 차량의 설계는 이미 시작됐습니다.",
-    "KUMA가 트랙에 꺼내 놓을 2027 머신의 모습을 가장 먼저 만나보세요.",
+    // 첫 화면에서 차량 사진과 겹치지 않도록 의미 단위로 한 줄씩 나눕니다.
+    "2026 시즌의 기록은 끝났고,",
+    "새로운 차량의 설계는 이미 시작됐습니다.",
+    "KUMA가 트랙에 꺼내 놓을 2027 머신의 모습을",
+    "가장 먼저 만나보세요.",
   ],
 } as const;
 

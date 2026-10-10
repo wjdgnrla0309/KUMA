@@ -7,8 +7,13 @@ export const HOMEPAGE_CONTENT = {
     programLabel: "KUMA 2027 DEVELOPMENT PROGRAM",
     titleLineOne: "PRECISION ENGINEERING",
     titleLineTwo: "UNCOMPROMISING SPEED",
-    image: "cars/KUMA_testdriveing_filmcam.jpg",
+    image: "cars/2026/hero-knu-f26-rain.jpg",
     vehicleLabel: "NEXT VEHICLE / 2027",
+    // 2027 차량 제작 진행 상황 → 단계가 끝날 때마다 completedSteps 맨 뒤에 단계 이름을 추가합니다.
+    progress: {
+      totalSteps: 5,
+      completedSteps: ["차량 프레임 설계"],
+    },
   },
   about: {
     image: "cars/2026/competition/001 (7).jpg",

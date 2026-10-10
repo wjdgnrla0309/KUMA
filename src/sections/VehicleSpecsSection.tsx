@@ -12,13 +12,13 @@ type VehicleSpecsSectionProps = {
 
 export function RecruitmentCard() {
   return (
-    <aside className="pointer-events-auto w-24 text-center">
+    <aside className="pointer-events-auto w-28 rounded-xl border border-racing-green/30 bg-zinc-950/80 p-2 text-center shadow-[0_8px_30px_rgba(0,0,0,0.5)] backdrop-blur">
       <img
         src={`${import.meta.env.BASE_URL}${HOMEPAGE_CONTENT.recruitment.qrImage}`}
         alt="KUMA 신입부원모집 QR 코드"
-        className="h-24 w-24 bg-white p-1 object-contain"
+        className="h-24 w-24 rounded-md bg-white p-1 object-contain"
       />
-      <p className="mt-2 font-sans text-xs font-semibold tracking-[0.08em] text-zinc-400">신입부원모집</p>
+      <p className="mt-2 font-sans text-xs font-semibold tracking-[0.08em] text-racing-green">신입부원모집</p>
     </aside>
   );
 }
@@ -68,10 +68,11 @@ export function VehicleSpecsSection({
                     alt={`${year} KUMA vehicle`}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/10" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <span className="text-3xl font-black tracking-[0.08em] text-white/90">{year}</span>
-                    <span className="mt-1 text-[9px] font-mono font-semibold tracking-[0.08em] text-zinc-100/80">
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/10" />
+                  {isSelected && <span className="absolute inset-y-0 left-0 w-1 bg-racing-green" aria-hidden="true" />}
+                  <div className="absolute left-4 top-3 flex flex-col items-start">
+                    <span className="font-display text-3xl tracking-[0.08em] text-white">{year}</span>
+                    <span className="mt-0.5 text-[9px] font-mono font-semibold tracking-[0.08em] text-zinc-200">
                       {yearVehicle.telemetry.maxPower} · {yearVehicle.telemetry.curbWeight} · {yearVehicle.telemetry.topSpeed}
                     </span>
                   </div>

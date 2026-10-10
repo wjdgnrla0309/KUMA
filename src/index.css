@@ -108,6 +108,297 @@ html {
   line-height: 1.4;
 }
 
+/* ---- 디자인 개선: 배경 분위기, 헤더, 카드, 섹션 리듬 ---- */
+body {
+  background:
+    radial-gradient(900px 500px at 12% -5%, rgba(57, 211, 83, 0.10), transparent 60%),
+    radial-gradient(800px 500px at 92% 8%, rgba(36, 87, 255, 0.12), transparent 60%),
+    #050505;
+  background-attachment: fixed;
+}
+
+#top {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-color: transparent;
+}
+
+header.fixed {
+  background: rgba(5, 5, 5, 0.72);
+  box-shadow: 0 1px 0 rgba(57, 211, 83, 0.18), 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+header.fixed nav a {
+  position: relative;
+  padding: 0.35rem 0;
+}
+
+header.fixed nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #39d353, #2457ff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+header.fixed nav a:hover::after {
+  transform: scaleX(1);
+}
+
+main section {
+  scroll-margin-top: 5rem;
+}
+
+/* 보조 글씨 대비 개선 */
+.text-zinc-400 { color: #b4b4bd; }
+.text-zinc-500 { color: #8e8e99; }
+
+/* 카드: 입체감과 호버 반응 */
+.bg-racing-card,
+.bg-zinc-900,
+.bg-zinc-900\/60 {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rounded-2xl.border:hover {
+  border-color: rgba(57, 211, 83, 0.45);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(57, 211, 83, 0.12);
+}
+
+/* ---- 첫 화면: 주행 사진 + 타이밍 타워 ---- */
+/* 모바일: 사진은 위쪽 띠, 아래로 갈수록 배경색으로 이어집니다. */
+.hero-shade {
+  background: linear-gradient(180deg, transparent 0%, transparent calc(4rem + 28svh), #050505 calc(4rem + 42svh));
+}
+
+@media (min-width: 1024px) {
+  .hero-shade {
+    background:
+      linear-gradient(100deg, rgba(5, 5, 5, 0.97) 0%, rgba(5, 5, 5, 0.8) 30%, rgba(5, 5, 5, 0.1) 60%, rgba(5, 5, 5, 0.25) 100%),
+      linear-gradient(0deg, rgba(5, 5, 5, 0.9) 0%, transparent 40%);
+  }
+}
+
+@media (max-width: 1023px) {
+  .timing-strip { gap: 0.25rem 0.9rem; }
+  .timing-strip .timing-value { font-size: 1.45rem; }
+  .timing-strip .timing-label { font-size: 0.95rem; }
+  .timing-strip-head { width: 100%; }
+}
+
+/* 차량 컬러 마스크: 원본 사진(2400x1600)과 같은 비율의 SVG라서 object-cover와 똑같이 맞춰집니다. */
+.hero-car-color {
+  --car-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 1600'%3E%3Cdefs%3E%3Cfilter id='b'%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3C/filter%3E%3C/defs%3E%3Cpolygon filter='url(%23b)' fill='%23fff' points='666,888 720,828 840,792 1152,768 1320,762 1398,720 1416,666 1464,650 1518,666 1536,564 1554,566 1596,624 1656,648 1704,696 1752,768 1836,828 1872,888 1914,948 1896,978 1836,1032 1704,1034 1632,1020 1188,1032 1056,1038 996,984 840,960 744,936 678,912'/%3E%3C/svg%3E");
+  -webkit-mask-image: var(--car-mask);
+  mask-image: var(--car-mask);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+}
+
+@media (min-width: 1024px) {
+  .hero-car-color {
+    -webkit-mask-position: 100% 50%;
+    mask-position: 100% 50%;
+  }
+}
+
+.hero-title {
+  font-size: clamp(3rem, min(7.5vw, 11vh), 7.5rem);
+  line-height: 0.88;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* 기밀 제원: 숫자를 강한 블러로 가립니다. 선택·복사도 막습니다. */
+.blurred-value {
+  display: inline-block;
+  filter: blur(0.22em);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* 넓은 화면에서 사진 틀 아래쪽이 배경으로 자연스럽게 사라지게 합니다. */
+@media (min-width: 1024px) {
+  .hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #050505 0%, transparent 30%);
+  }
+}
+
+.hero-lede {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* 둘째 줄: 사진 위에서도 읽히도록 꽉 찬 브랜드 초록 */
+.hero-title-outline {
+  color: #39d353;
+}
+
+.hero-sweep {
+  background: linear-gradient(100deg, transparent 40%, rgba(57, 211, 83, 0.18) 50%, transparent 60%);
+  transform: translateX(-100%);
+  animation: hero-sweep 1.8s cubic-bezier(0.6, 0, 0.2, 1) 0.3s 1 forwards;
+}
+
+@keyframes hero-sweep {
+  to { transform: translateX(100%); }
+}
+
+.timing-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 2rem;
+  padding: 1rem 0;
+}
+
+.timing-strip-head {
+  font-size: 0.85rem;
+  color: #39d353;
+  margin-right: 0.5rem;
+}
+
+.timing-strip-cell {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.timing-tower {
+  background: rgba(0, 0, 0, 0.7);
+  border-left: 3px solid #39d353;
+  backdrop-filter: blur(8px);
+}
+
+.timing-head {
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: #b4b4bd;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timing-row {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr auto;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.timing-pos {
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  background: #f4f4f5;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.timing-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: #d4d4d8;
+}
+
+.timing-value {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-sweep { animation: none; display: none; }
+}
+
+/* 후원사 로고 줄: 평소엔 단색, 호버 시 원래 색 */
+.partner-strip .sponsor-chip {
+  height: 2.5rem;
+  min-width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  filter: grayscale(1);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.partner-strip .sponsor-chip,
+.partner-strip .sponsor-chip img {
+  max-width: 100%;
+}
+
+.partner-strip .sponsor-chip:hover {
+  opacity: 1;
+  filter: none;
+}
+
+/* 섹션 구분선: 단색 선 대신 중앙이 밝은 그라데이션 라인 */
+main > section.border-t {
+  border-top: 0;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  main > section.border-t {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+main > section.border-t::before,
+.site-footer {
+  background-image: linear-gradient(90deg, transparent, rgba(57, 211, 83, 0.35), rgba(36, 87, 255, 0.35), transparent);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+}
+
+main > section.border-t::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 1px;
+}
+
+/* 목록형 카드는 호버 시 살짝 떠오르게 */
+article.group,
+figure.group,
+#achievements button.group {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+article.group:hover,
+#gallery figure.group:hover,
+#achievements button.group:hover {
+  transform: translateY(-4px);
+  border-color: rgba(57, 211, 83, 0.5);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  article.group:hover,
+  #gallery figure.group:hover,
+  #achievements button.group:hover { transform: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .instagram-track,
   .sponsor-track {

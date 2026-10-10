@@ -45,7 +45,7 @@ export function ContactSection() {
 
           <figure className="group relative mt-8 h-40 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
             <img
-              src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("001 (11).jpg")}`}
+              src={`${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("20260829_formula day2-115-web.jpg")}`}
               alt={PAGE_COPY.contact.imageAlt}
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"

@@ -13,7 +13,7 @@ const BENEFIT_ICONS: Record<SponsorBenefit["icon"], LucideIcon> = {
 };
 
 // 공식 로고를 표시하고, 파일을 읽지 못하면 이름으로 대체합니다.
-function SponsorIdentity({
+export function SponsorIdentity({
   sponsor,
 }: {
   sponsor: Sponsor;

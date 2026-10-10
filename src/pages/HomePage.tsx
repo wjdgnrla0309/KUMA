@@ -10,10 +10,11 @@ import { AchievementsSection } from "../sections/AchievementsSection";
 import { ContactSection } from "../sections/ContactSection";
 import { GallerySection } from "../sections/GallerySection";
 import { HeroSection } from "../sections/HeroSection";
+import { KeyFiguresSection } from "../sections/KeyFiguresSection";
 import { InstagramFeedSection } from "../sections/InstagramFeedSection";
 import { NewsSection } from "../sections/NewsSection";
 import { SponsorshipSection } from "../sections/SponsorshipSection";
-import { RecruitmentCard, VehicleSpecsSection } from "../sections/VehicleSpecsSection";
+import { VehicleSpecsSection } from "../sections/VehicleSpecsSection";
 
 /** 홈의 섹션 순서와 여러 섹션이 공유하는 선택·모달 상태만 관리합니다. */
 export function HomePage() {
@@ -32,9 +33,6 @@ export function HomePage() {
 
       {/* 화면에서 보이는 순서대로 섹션을 배치합니다. */}
       <main className="relative">
-        <div className="pointer-events-none absolute inset-x-0 top-24 z-20 mx-auto max-w-7xl px-6">
-          <RecruitmentCard />
-        </div>
         <HeroSection onOpenDecrypt={() => setIsDecryptOpen(true)} />
         <AboutKumaSection />
         <VehicleSpecsSection
@@ -47,10 +45,12 @@ export function HomePage() {
         <GallerySection />
         <SponsorshipSection />
         <ContactSection />
-        <InstagramFeedSection />
+        <KeyFiguresSection />
       </main>
 
       <SiteFooter />
+      {/* 인스타그램 피드는 페이지 맨 끝, 푸터 아래에 둡니다. */}
+      <InstagramFeedSection />
 
       {/* 상세 화면은 선택된 항목이 있을 때만 생성합니다. */}
       {isDecryptOpen && <DecryptModal onClose={() => setIsDecryptOpen(false)} />}

@@ -24,19 +24,16 @@ export interface VehicleData {
 // 새 차량 추가 → VEHICLE_DATABASE에 연도 항목 추가 | 수정 → 요약 수치와 specs 제원표를 함께 확인
 // ============================================================
 
-const vehiclePhoto = (file: string) =>
-  `${import.meta.env.BASE_URL}cars/${encodeURIComponent(file)}`;
-
 export const VEHICLE_DATABASE = {
   "2026": {
     season: "2026",
-    image: vehiclePhoto("KUMA_testdriveing_filmcam.jpg"),
+    image: `${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("20260829_formula day2-111-web.jpg")}`,
     carNumber: "No. 14",
     modelName: "KNU-F26",
     tagline: "경량 10인치 업라이트 패키징 및 고회전 자연흡기 파워트레인 최적화",
     telemetry: {
       curbWeight: "189 kg",
-      maxPower: "100 ps",
+      maxPower: "50 ps",
       topSpeed: "201 km/h",
       downforce: "760 N",
     },

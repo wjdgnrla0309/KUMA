@@ -10,15 +10,6 @@ export function AboutKumaSection() {
       className="py-20 px-6 max-w-7xl mx-auto border-t border-zinc-800"
     >
       <div className="w-full">
-        <figure className="group relative mb-10 h-64 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 md:h-80">
-          <img
-            src={`${import.meta.env.BASE_URL}${encodeURI(HOMEPAGE_CONTENT.about.image)}`}
-            alt={HOMEPAGE_CONTENT.about.imageAlt}
-            loading="lazy"
-            className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-        </figure>
         <SectionHeader
           label={HOMEPAGE_CONTENT.about.label}
           title={HOMEPAGE_CONTENT.about.title}
