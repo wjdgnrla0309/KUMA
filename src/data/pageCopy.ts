@@ -36,8 +36,8 @@ export const PAGE_COPY = {
     bannerCaption: "Partner with the team behind the car.",
     closeListLabel: "스폰서 목록 닫기",
     showListLabel: "스폰서 목록 보기",
-    proposalTitle: "KUMA 스폰서십 제안서 PPTX 다운로드",
-    proposalLabel: "제안서 다운로드 (PPTX)",
+    proposalTitle: "KUMA 스폰서십 제안서 PDF 다운로드",
+    proposalLabel: "제안서 다운로드 (PDF)",
   },
   instagram: {
     followLabel: "Follow KUMA",
