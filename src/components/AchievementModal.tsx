@@ -27,12 +27,12 @@ export function AchievementModal({ achievement, onClose, onSelectVehicle }: Achi
           </button>
         </div>
 
-        <div className={`grid gap-0 ${["2023", "2024", "2025"].includes(achievement.season) ? "" : "md:grid-cols-2"}`}>
-          <div className={`${["2023", "2024", "2025"].includes(achievement.season) ? "" : "h-full min-h-[260px]"} bg-zinc-900`}>
+        <div className={`grid gap-0 ${["2023", "2024", "2025", "2026"].includes(achievement.season) ? "" : "md:grid-cols-2"}`}>
+          <div className={`${["2023", "2024", "2025", "2026"].includes(achievement.season) ? "" : "h-full min-h-[260px]"} bg-zinc-900`}>
             <img
               src={achievement.image}
               alt={achievement.title}
-              className={`w-full ${["2023", "2024", "2025"].includes(achievement.season) ? "h-auto object-contain" : "h-full object-cover"}`}
+              className={`w-full ${["2023", "2024", "2025", "2026"].includes(achievement.season) ? "h-auto object-contain" : "h-full object-cover"}`}
             />
           </div>
 

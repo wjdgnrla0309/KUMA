@@ -26,7 +26,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     title: "KNU-F26",
     short: "고회전 엔진과 경량 패키지로 성능을 극대화했습니다.",
     rank: "14 / 55 teams",
-    image: achievementPhoto("KakaoTalk_20260829_190154401.jpg"),
+    image: `${import.meta.env.BASE_URL}cars/2026/KUMA_2026.png`,
     specs: [
       { label: "Engine", value: "yzf-r3(321cc)" },
       { label: "Power", value: "50 PS" },

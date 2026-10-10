@@ -29,28 +29,28 @@ export function AchievementsSection({
             key={achievement.title}
             type="button"
             onClick={() => onSelectAchievement(achievement)}
-            className="group flex w-full overflow-hidden rounded-2xl border border-zinc-800 bg-racing-card text-left transition-colors hover:border-racing-green/60"
+            className="group flex w-full flex-col items-center overflow-hidden sm:flex-row rounded-2xl border border-zinc-800 bg-racing-card text-left transition-colors hover:border-racing-green/60"
           >
-            <div className="h-40 w-[220px] shrink-0 overflow-hidden bg-zinc-900 md:h-44 md:w-[260px]">
+            <div className="w-full shrink-0 overflow-hidden bg-zinc-900 sm:w-[38%]">
               <img
                 src={achievement.image}
                 alt={achievement.title}
-                className={`h-full w-full ${["2023", "2024", "2025"].includes(achievement.season) ? "object-contain" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
+                className="block h-auto w-full"
               />
             </div>
 
-            <div className="flex flex-1 items-center justify-between gap-6 p-5 md:p-6">
+            <div className="flex w-full min-w-0 flex-1 items-center justify-between gap-4 p-3 md:p-4">
               <div className="min-w-0 flex-1">
-                <div className="mb-3 flex items-center justify-between gap-2">
+                <div className="mb-1 flex items-center justify-between gap-2">
                   <span className="text-[10px] font-mono tracking-[0.2em] text-racing-green uppercase">{achievement.season}</span>
                   <span className="text-[10px] font-mono tracking-[0.18em] text-zinc-500 uppercase">{achievement.category}</span>
                 </div>
 
                 <h3 className={`text-xl font-black tracking-[-0.04em] text-white md:text-2xl ${/[가-힣]/.test(achievement.title) ? "" : "heading-english"}`}>{achievement.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-400 md:text-base">{achievement.short}</p>
+                <p className="mt-1 text-sm leading-relaxed text-zinc-400 md:text-base">{achievement.short}</p>
               </div>
 
-              <div className="flex shrink-0 items-end gap-5 md:gap-8">
+              <div className="flex shrink-0 items-end gap-3 md:gap-5">
                 <div className="text-left">
                   <span className="block text-[10px] font-mono tracking-[0.18em] text-zinc-500 uppercase">{PAGE_COPY.achievements.rankingLabel}</span>
                   <span className="mt-1 block text-sm font-semibold text-white md:text-base">{achievement.rank}</span>
