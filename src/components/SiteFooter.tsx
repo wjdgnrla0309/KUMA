@@ -21,8 +21,8 @@ export function SiteFooter() {
             국립공주대학교 자작자동차 동아리 · KSAE 대학생 자작자동차대회 Formula 부문 참가팀
           </p>
           <a
-            href={`${import.meta.env.BASE_URL}documents/KUMA_Sponsorship_Proposal.pdf`}
-            download="KUMA_Sponsorship_Proposal.pdf"
+            href={`${import.meta.env.BASE_URL}documents/KUMA_Sponsorship_Proposal_Claude_v3.pptx`}
+            download="KUMA_Sponsorship_Proposal_Claude_v3.pptx"
             className="mt-6 inline-flex items-center gap-2 rounded-md border border-zinc-700 px-4 py-2 text-xs font-semibold tracking-[0.12em] text-zinc-200 transition hover:border-racing-green hover:text-racing-green"
           >
             <FileText className="h-4 w-4" /> SPONSORSHIP PROPOSAL

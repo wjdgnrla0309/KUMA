@@ -147,8 +147,8 @@ export function SponsorshipSection() {
           {isSponsorListOpen ? PAGE_COPY.sponsorship.closeListLabel : PAGE_COPY.sponsorship.showListLabel}
         </button>
         <a
-          href={`${import.meta.env.BASE_URL}documents/KUMA_Sponsorship_Proposal.pdf`}
-          download="KUMA_Sponsorship_Proposal.pdf"
+          href={`${import.meta.env.BASE_URL}documents/KUMA_Sponsorship_Proposal_Claude_v3.pptx`}
+          download="KUMA_Sponsorship_Proposal_Claude_v3.pptx"
           title={PAGE_COPY.sponsorship.proposalTitle}
           className="inline-flex items-center justify-center rounded-full border border-zinc-600 bg-black/70 px-7 py-3 text-sm font-semibold text-white transition hover:border-racing-green hover:text-racing-green"
         >
