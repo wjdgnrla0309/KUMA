@@ -36,7 +36,7 @@ export function ContactSection() {
               <div className="space-y-2">
                 {CONTACT_DETAILS.representatives.map((person) => (
                   <p key={person.role}>
-                    {person.role} : {person.name} / 연락처 : {person.phone} / 메일 : {person.email}
+                    {person.role} : {person.name} / 연락처 : {person.phone} / 메일 : <span className="font-['A2Z',sans-serif] normal-case tracking-normal">{person.email}</span>
                   </p>
                 ))}
               </div>
