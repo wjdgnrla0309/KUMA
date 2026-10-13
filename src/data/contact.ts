@@ -13,6 +13,7 @@ export const CONTACT_DETAILS = {
   representatives: [
     { role: "팀장", name: "노경민", phone: "010-5318-4857", email: "shrudals4857@naver.com" },
     { role: "회장", name: "정민규", phone: "010-2232-7083", email: "night3200@naver.com" },
+    { role: "대외협력부장", name: "김정후", phone: "010-3319-1362", email: "wjdgnrla0309@gmail.com" }
   ],
 } as const;
 
