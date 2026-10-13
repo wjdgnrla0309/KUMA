@@ -11,8 +11,8 @@ export const CONTACT_DETAILS = {
     "충청남도 천안시 서북구 천안대로 1223-24 / 국립공주대학교 천안공과대학 학생회관 318호",
   email: "wjdgnrla0309@gmail.com",
   representatives: [
-    { role: "팀장", name: "홍길동", phone: "010-1234-5678", email: "" },
-    { role: "회장", name: "홍길동", phone: "010-1234-5678", email: "" },
+    { role: "팀장", name: "노경민", phone: "010-5318-4857", email: "shrudals4857@naver.com" },
+    { role: "회장", name: "정민규", phone: "010-2232-7083", email: "night3200@naver.com" },
   ],
 } as const;
 
