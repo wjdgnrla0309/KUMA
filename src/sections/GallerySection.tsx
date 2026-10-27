@@ -39,6 +39,7 @@ export function GallerySection() {
               src={photo.src}
               alt={photo.alt}
               loading="lazy"
+              decoding="async"
               className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <figcaption className="p-4">

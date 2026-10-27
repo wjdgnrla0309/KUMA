@@ -22,26 +22,26 @@ const competitionPhoto = (file: string) =>
 
 export const GALLERY_PREVIEWS: GalleryPreview[] = [
   {
-    src: competitionPhoto("20260829_formula day2-110.jpg"),
+    src: competitionPhoto("20260829_formula day2-110-web.jpg"),
     alt: "2026 FSK 대회에서 주행하는 KUMA 14번 차량",
     category: "2026 FSK · ON TRACK",
     title: "2026 대회 주행",
   },
 
   {
-    src: competitionPhoto("20260828_formula day1-148.jpg"),
+    src: competitionPhoto("20260828_formula day1-148-web.jpg"),
     alt: "2026 FSK 대회 피트에서 차량을 점검하는 KUMA 팀",
     category: "2026 FSK · PIT & PADDOCK",
     title: "피트에서의 차량 점검",
   },
   {
-    src: competitionPhoto("20260829_formula day3-3.jpg"),
+    src: competitionPhoto("20260829_formula day3-3-web.jpg"),
     alt: "2026 FSK 대회의 젖은 트랙을 주행하는 KUMA 차량",
     category: "2026 FSK · RACE DAY",
     title: "트랙 위의 도전",
   },
   {
-    src: competitionPhoto("20260828_formula day1-10.jpg"),
+    src: competitionPhoto("20260828_formula day1-10-web.jpg"),
     alt: "2026 FSK 대회 현장에서 서류를 확인하는 KUMA 팀",
     category: "2026 FSK · TEAM MOMENTS",
     title: "대회 현장의 팀원들",
