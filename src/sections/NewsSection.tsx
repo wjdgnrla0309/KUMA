@@ -32,7 +32,7 @@ export function NewsSection() {
               className="h-44 w-full object-cover transition duration-500 group-hover:scale-105"
             />
             <div className="p-6">
-              <span className="text-xs font-mono text-racing-green">{date}</span>
+              <span className="text-xs font-mono tracking-[0.12em] text-racing-green">{date}</span>
               <h3 className={`text-lg font-black tracking-[-0.03em] text-white mt-4 ${/[가-힣]/.test(title) ? "" : "heading-english"}`}>
                 {title}
               </h3>
