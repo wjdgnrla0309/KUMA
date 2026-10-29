@@ -12,8 +12,8 @@ export type NewsItem = {
 // 홈페이지 뉴스 카드: 새 소식은 배열 앞쪽에 추가합니다.
 export const NEWS_ITEMS: NewsItem[] = [
   {
-    date: "2026.10.01",
-    image: "20260828_formula day1-7-web.jpg",
+    date: "2026.10",
+    image: "20261001_general-meeting-web.jpg",
     title: "총회 개최 및 2027 차량 구상",
     description:
       "총회를 열고 2027년도 차량의 방향과 구상안을 논의했습니다.",
