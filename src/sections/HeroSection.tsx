@@ -101,7 +101,7 @@ export function HeroSection({ onOpenDecrypt }: HeroSectionProps) {
                 <p className="mt-2 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-sm text-zinc-200" aria-hidden="true">
                   <Check className="h-3.5 w-3.5 text-racing-green" strokeWidth={3} />
                   <span className="whitespace-nowrap font-display tracking-[0.1em] text-racing-green">STEP {completedSteps.length} / {totalSteps}</span>
-                  완료 · {latestStep}
+                  {latestStep} 완료.
                 </p>
               </div>
             </div>
