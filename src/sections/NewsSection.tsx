@@ -20,7 +20,7 @@ export function NewsSection() {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {NEWS_ITEMS.map(({ date, title, description, image }) => (
+        {[...NEWS_ITEMS].sort((a, b) => b.date.localeCompare(a.date)).map(({ date, title, description, image }) => (
           <article
             key={`${date}-${title}`}
             className="group overflow-hidden rounded-xl border border-zinc-800 bg-racing-card"
