@@ -28,10 +28,8 @@ export const ACHIEVEMENTS: Achievement[] = [
     rank: "14 / 55 teams",
     image: `${import.meta.env.BASE_URL}cars/2026/KUMA_2026.png`,
     specs: [
-      { label: "Engine", value: "yzf-r3(321cc)" },
-      { label: "Power", value: "50 PS" },
-      { label: "Top Speed", value: "131 km/h" },
-      { label: "Class", value: "Formula" },
+      { label: "Engine", value: "YAMAHA YZF-R3" },
+      { label: "Power", value: "42 PS" },
     ],
   },
   {
@@ -42,10 +40,8 @@ export const ACHIEVEMENTS: Achievement[] = [
     rank: "14 / 55 teams",
     image: `${import.meta.env.BASE_URL}cars/2025/KUMA_2025.png`,
     specs: [
-      { label: "Engine", value: "321cc DOHC" },
-      { label: "Power", value: "48 PS" },
-      { label: "Top Speed", value: "126 km/h" },
-      { label: "Class", value: "Formula" },
+      { label: "Engine", value: "CBR600RR PC40 (599cc)" },
+      { label: "Power", value: "121 PS" },
     ],
   },
   {
@@ -56,10 +52,8 @@ export const ACHIEVEMENTS: Achievement[] = [
     rank: "",
     image: achievementPhoto("KUMA_2024.png"),
     specs: [
-      { label: "Engine", value: "321cc DOHC" },
-      { label: "Power", value: "45 PS" },
-      { label: "Top Speed", value: "121 km/h" },
-      { label: "Class", value: "Formula" },
+      { label: "Engine", value: "CBR600RR PC40 (599cc)" },
+      { label: "Power", value: "121 PS" },
     ],
   },
   {
@@ -69,6 +63,9 @@ export const ACHIEVEMENTS: Achievement[] = [
     short: "2023 FSK 금상 수상",
     rank: "금상",
     image: achievementPhoto("KUMA_2023.png"),
-    specs: [],
+    specs: [
+      { label: "Engine", value: "CBR600RR PC40 (599cc)" },
+      { label: "Power", value: "121 PS" },
+    ],
   },
 ];

@@ -73,7 +73,7 @@ export function VehicleSpecsSection({
                   <div className="absolute left-4 top-3 flex flex-col items-start">
                     <span className="font-display text-3xl tracking-[0.08em] text-white">{year}</span>
                     <span className="mt-0.5 text-[9px] font-mono font-semibold tracking-[0.08em] text-zinc-200">
-                      {yearVehicle.telemetry.maxPower} · {yearVehicle.telemetry.curbWeight} · {yearVehicle.telemetry.topSpeed}
+                      {yearVehicle.telemetry.maxPower} · {yearVehicle.telemetry.curbWeight}
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between text-[10px] font-mono tracking-[0.18em] uppercase text-zinc-100/90">
