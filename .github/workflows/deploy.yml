@@ -40,6 +40,9 @@ jobs:
           mkdir -p dist/gallery
           cp dist/index.html dist/gallery/index.html
 
+      - name: Create 404 fallback for news detail pages
+        run: cp dist/index.html dist/404.html
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
