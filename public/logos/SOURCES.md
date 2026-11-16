@@ -25,3 +25,4 @@
 배치 참고: https://challengerfsae.com/sponsors . 후원 등급과 순위는 복사하지 않고 기존 목록과 순서를 유지했습니다.
 
 상표·로고의 권리는 각 브랜드에 있습니다. 기존 후원사 목록과 링크는 유지했습니다.
+| Drexler | drexler.svg | https://www.drexler-automotive.com/en/motorsport (공식 사이트 헤더 logo.svg, 2026-11-16 확인) |

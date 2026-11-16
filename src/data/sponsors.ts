@@ -89,5 +89,6 @@ export const SPONSOR_LIST: Sponsor[] = [
   { name: "CANE CREEK", logo: "/logos/cane-creek.jpg", logoScale: 1, logoTreatment: "light-background", url: "https://canecreek.com" },
   { name: "OPTIMUMG", logo: "/logos/optimumg.png", logoScale: 1.25, url: "https://optimumg.com" },
   { name: "NORD-LOCK GROUP", logo: "/logos/nord-lock.png", logoScale: 0.9, url: "https://www.nord-lock.com" },
+  { name: "DREXLER", logo: "/logos/drexler.svg", logoTreatment: "light-background", url: "https://www.drexler-automotive.com/en/motorsport" },
   { name: "TURBOSMART", logo: "/logos/turbosmart.svg", logoScale: 2.2, url: "https://turbosmart.com" },
 ];

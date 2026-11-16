@@ -24,12 +24,12 @@ export const ACHIEVEMENTS: Achievement[] = [
     season: "2026",
     category: "Season",
     title: "KNU-F26",
-    short: "고회전 엔진과 경량 패키지로 성능을 극대화했습니다.",
+    short: "저출력 · 극한 경량화 세팅으로 완성한 차량입니다.",
     rank: "14 / 55 teams",
     image: `${import.meta.env.BASE_URL}cars/2026/KUMA_2026.png`,
     specs: [
       { label: "Engine", value: "YAMAHA YZF-R3" },
-      { label: "Power", value: "42 PS" },
+      { label: "Stock Power", value: "42 PS" },
     ],
   },
   {

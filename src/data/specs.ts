@@ -28,10 +28,10 @@ export const VEHICLE_DATABASE = {
     image: `${import.meta.env.BASE_URL}cars/2026/competition/${encodeURIComponent("20260829_formula day2-111-web.jpg")}`,
     carNumber: "No. 14",
     modelName: "KNU-F26",
-    tagline: "경량 10인치 업라이트 패키징 및 고회전 자연흡기 파워트레인 최적화",
+    tagline: "저출력 · 극한 경량화 세팅의 10인치 업라이트 패키지",
     telemetry: {
       curbWeight: "180 kg",
-      maxPower: "42 ps",
+      maxPower: "순정 42 ps",
     },
 
     // 제원표 본문에 표시할 항목입니다. 값 변경 시 위 요약 수치도 확인합니다.
@@ -42,7 +42,7 @@ export const VEHICLE_DATABASE = {
       { label: "공차 무게", value: "180 kg" },
       { label: "엔진", value: "YAMAHA YZF-R3" },
       { label: "엔진 형식", value: "수랭식 2기통" },
-      { label: "최고 출력 / 토크", value: "42 ps @ 10750 rpm / 3.07 kgf·m @ 9000 rpm" },
+      { label: "순정 엔진 최고출력 / 토크", value: "42 ps @ 10750 rpm / 3.07 kgf·m @ 9000 rpm" },
       { label: "엔진 제어기 (ECU)", value: "ECU Master EMU Black" },
       { label: "종 감속비", value: "3.25 : 1" },
     ],
@@ -52,7 +52,7 @@ export const VEHICLE_DATABASE = {
     image: `${import.meta.env.BASE_URL}cars/2025/competition/${encodeURIComponent("025 formula student korea day3-155.jpg")}`,
     carNumber: "No. 13",
     modelName: "KNU-F25",
-    tagline: "내연기관 파워트레인과 공력 패키지의 기본기를 다진 모델",
+    tagline: "극한의 CL/CD ratio 세팅 차량",
     telemetry: {
       curbWeight: "268 kg",
       maxPower: "121 ps",
