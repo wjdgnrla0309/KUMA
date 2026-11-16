@@ -14,7 +14,7 @@ function PhotoCard({ item, large }: CardProps) {
   return (
     <a
       href={`${SITE_BASE_URL}news/${item.id}`}
-      className={`group relative flex flex-col overflow-hidden rounded-xl border border-zinc-800 bg-racing-card text-left md:block ${large ? "md:h-[28rem]" : "md:h-72"}`}
+      className={`group relative flex flex-col overflow-hidden rounded-xl border border-zinc-800 bg-racing-card text-left md:block ${large ? "md:h-[clamp(20rem,30vw,36rem)]" : "md:h-72"}`}
     >
       <div className={`relative overflow-hidden ${large ? "h-56" : "h-48"} md:absolute md:inset-0 md:h-full`}>
         <NewsPhoto file={item.cover ?? item.images[0]?.file} alt={item.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
@@ -25,10 +25,10 @@ function PhotoCard({ item, large }: CardProps) {
           <Images className="h-3.5 w-3.5" /> {item.images.length}
         </span>
       )}
-      <div className="relative p-5 md:absolute md:inset-x-0 md:bottom-0 md:p-6">
-        <span className="text-sm font-mono tracking-[0.15em] text-racing-green">{item.date} · {item.category}</span>
-        <h3 className={`mt-2 font-black tracking-[0.03em] text-white ${large ? "text-2xl md:text-3xl" : "text-lg"} ${headingClass(item.title)}`}>{item.title}</h3>
-        <p className={`mt-2 break-keep text-sm leading-relaxed text-zinc-300 ${large ? "md:max-w-2xl" : "line-clamp-2"}`}>{item.description}</p>
+      <div className={`relative p-5 md:absolute md:inset-x-0 md:bottom-0 ${large ? "md:p-[clamp(1.5rem,2.5vw,3rem)]" : "md:p-6"}`}>
+        <span className={`font-mono tracking-[0.15em] ${large ? "text-[clamp(0.875rem,0.7rem+0.25vw,1.0625rem)]" : "text-sm"} text-racing-green`}>{item.date} · {item.category}</span>
+        <h3 className={`mt-2 font-black tracking-[0.03em] text-white ${large ? "text-[clamp(1.5rem,1rem+1.5vw,3rem)] leading-tight" : "text-lg"} ${headingClass(item.title)}`}>{item.title}</h3>
+        <p className={`mt-2 break-keep leading-relaxed text-zinc-300 ${large ? "text-[clamp(0.875rem,0.6rem+0.5vw,1.25rem)] md:max-w-[min(48rem,70%)]" : "text-sm line-clamp-2"}`}>{item.description}</p>
       </div>
     </a>
   );
@@ -42,7 +42,7 @@ export function NewsSection() {
   return (
     <section id="news" className="py-20 px-6 max-w-7xl mx-auto border-t border-zinc-800">
       <div className="mb-10">
-        <SectionHeader label={PAGE_COPY.news.label} title={PAGE_COPY.news.title} className="!mt-0" />
+        <SectionHeader label={PAGE_COPY.news.label} title={PAGE_COPY.news.title} className="!mt-0 [&_h2]:text-[clamp(1.875rem,1.2rem+2vw,3.5rem)]" />
       </div>
 
       {featured && (

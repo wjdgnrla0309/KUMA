@@ -29,9 +29,9 @@ export function NewsDetailPage({ id }: { id: string }) {
         ) : (
           <>
             <header className="mt-8 border-b border-zinc-800 pb-8">
-              <p className="text-xs font-mono tracking-[0.2em] text-racing-green uppercase">{item.date} · {item.category}</p>
-              <h1 className={`mt-3 text-3xl font-black tracking-[0.03em] text-white md:text-4xl ${headingClass(item.title)}`}>{item.title}</h1>
-              <p className="mt-6 max-w-3xl whitespace-pre-line break-keep text-base leading-relaxed text-zinc-300">{item.body ?? item.description}</p>
+              <p className="text-[clamp(0.75rem,0.6rem+0.25vw,1.0625rem)] font-mono tracking-[0.2em] text-racing-green uppercase">{item.date} · {item.category}</p>
+              <h1 className={`mt-3 text-[clamp(1.75rem,1.25rem+1.5vw,3.5rem)] leading-tight font-black tracking-[0.03em] text-white ${headingClass(item.title)}`}>{item.title}</h1>
+              <p className="mt-6 max-w-[44em] whitespace-pre-line break-keep text-[clamp(1rem,0.75rem+0.5vw,1.375rem)] leading-relaxed text-zinc-300">{item.body ?? item.description}</p>
             </header>
 
             {item.images.length === 0 ? (
