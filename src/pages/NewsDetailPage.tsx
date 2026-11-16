@@ -20,7 +20,7 @@ export function NewsDetailPage({ id }: { id: string }) {
   return (
     <main className="min-h-screen bg-racing-dark px-6 pb-20 pt-28 text-zinc-100">
       <div className="mx-auto max-w-6xl">
-        <a href={`${SITE_BASE_URL}#news`} className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.12em] text-zinc-400 transition hover:text-racing-green">
+        <a href={`${SITE_BASE_URL}#news`} className="inline-flex items-center gap-2 text-[clamp(1.0625rem,0.85rem+0.4vw,1.5rem)] font-mono font-bold tracking-[0.12em] text-zinc-400 transition hover:text-racing-green">
           ← NEWS
         </a>
 
@@ -29,7 +29,7 @@ export function NewsDetailPage({ id }: { id: string }) {
         ) : (
           <>
             <header className="mt-8 border-b border-zinc-800 pb-8">
-              <p className="text-[clamp(0.75rem,0.6rem+0.25vw,1.0625rem)] font-mono tracking-[0.2em] text-racing-green uppercase">{item.date} · {item.category}</p>
+              <p className="text-[clamp(0.9375rem,0.75rem+0.35vw,1.3125rem)] font-mono tracking-[0.2em] text-racing-green uppercase">{item.date} · {item.category}</p>
               <h1 className={`mt-3 text-[clamp(1.75rem,1.25rem+1.5vw,3.5rem)] leading-tight font-black tracking-[0.03em] text-white ${headingClass(item.title)}`}>{item.title}</h1>
               <p className="mt-6 max-w-[44em] whitespace-pre-line break-keep text-[clamp(1rem,0.75rem+0.5vw,1.375rem)] leading-relaxed text-zinc-300">{item.body ?? item.description}</p>
             </header>
