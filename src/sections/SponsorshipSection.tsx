@@ -146,15 +146,22 @@ export function SponsorshipSection() {
         >
           {isSponsorListOpen ? PAGE_COPY.sponsorship.closeListLabel : PAGE_COPY.sponsorship.showListLabel}
         </button>
-        <a
-          href={`${import.meta.env.BASE_URL}documents/KUMA_Sponsorship_Proposal_Claude_v3.pdf`}
-          download="KUMA_Sponsorship_Proposal_Claude_v3.pdf"
-          title={PAGE_COPY.sponsorship.proposalTitle}
-          className="inline-flex items-center justify-center rounded-full border border-zinc-600 bg-black/70 px-7 py-3 text-sm font-semibold text-white transition hover:border-racing-green hover:text-racing-green"
-        >
-          <FileText className="mr-2 h-4 w-4" />
-          {PAGE_COPY.sponsorship.proposalLabel}
-        </a>
+        {[
+          { file: "KUMA_Sponsorship_Proposal_KO.pdf", label: PAGE_COPY.sponsorship.proposalLabel, lang: "ko" },
+          { file: "KUMA_Sponsorship_Proposal_EN.pdf", label: "Proposal (PDF, English)", lang: "en" },
+        ].map(({ file, label, lang }) => (
+          <a
+            key={file}
+            href={`${import.meta.env.BASE_URL}documents/${file}`}
+            download={file}
+            hrefLang={lang}
+            title={PAGE_COPY.sponsorship.proposalTitle}
+            className="inline-flex items-center justify-center rounded-full border border-zinc-600 bg-black/70 px-7 py-3 text-sm font-semibold text-white transition hover:border-racing-green hover:text-racing-green"
+          >
+            <FileText className="mr-2 h-4 w-4" />
+            {label}
+          </a>
+        ))}
           </div>
         </div>
       </div>
