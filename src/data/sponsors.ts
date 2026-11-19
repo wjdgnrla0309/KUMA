@@ -91,4 +91,11 @@ export const SPONSOR_LIST: Sponsor[] = [
   { name: "NORD-LOCK GROUP", logo: "/logos/nord-lock.png", logoScale: 0.9, url: "https://www.nord-lock.com" },
   { name: "DREXLER", logo: "/logos/drexler.svg", logoTreatment: "light-background", url: "https://www.drexler-automotive.com/en/motorsport" },
   { name: "TURBOSMART", logo: "/logos/turbosmart.svg", logoScale: 2.2, url: "https://turbosmart.com" },
+  {
+    name: "SHENZHEN XINCHENGSHI PRECISION MANUFACTURE CO., LTD",
+    logo: "/logos/xinchengshi-gear.png",
+    logoScale: 1.2,
+    url: "https://www.tradewheel.com/co/shenzhen-xinchengshi-precision-manufactu-9584/",
+    linkLabel: "SHENZHEN XINCHENGSHI PRECISION MANUFACTURE CO., LTD 회사 소개 보기 (TradeWheel)",
+  },
 ];

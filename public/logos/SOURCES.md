@@ -26,3 +26,10 @@
 
 상표·로고의 권리는 각 브랜드에 있습니다. 기존 후원사 목록과 링크는 유지했습니다.
 | Drexler | drexler.svg | https://www.drexler-automotive.com/en/motorsport (공식 사이트 헤더 logo.svg, 2026-11-16 확인) |
+
+## 2026-11-19 추가
+
+- SHENZHEN XINCHENGSHI PRECISION MANUFACTURE CO., LTD: `xinchengshi.webp`
+- 출처: https://www.tradewheel.com/co/shenzhen-xinchengshi-precision-manufactu-9584/ 의 회사 소개 이미지. 공식 홈페이지 원본은 확인하지 못했으며, 동일 회사명으로 등록된 공급업체 프로필에서 확보했습니다.
+- 이미지 원본: https://img2.tradewheel.com/uploads/images/companies/logo/3/4/ctprecision4398-0914537001552727132-150-.png.webp
+- 표시용 `xinchengshi-gear.png`: 내장 이미지 편집 도구로 원본의 파란 기어 심볼만 추출하고 글자·배경을 제거한 투명 이미지. 저해상도 원본을 정리한 가공본이며 공식 벡터 원본은 아닙니다. 편집 지시: 기어 형태를 유지하고 글자와 배경을 제거하여 선명한 투명 심볼로 정리.
