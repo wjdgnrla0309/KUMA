@@ -143,12 +143,3 @@ Vite 개발 서버는 [server/contact-middleware.ts](server/contact-middleware.t
 개발 서버와 `preview`에는 Instagram API가 연결되어 있지 않아 기본 피드를 유지합니다. 배포 환경에서도 API 실패·빈 응답 시 기본 피드를 유지합니다.
 `api/` 함수는 Vercel 등 해당 함수를 실행하는 서버 배포 환경이 필요하며, `dist/` 정적 파일만으로는 문의·Instagram API가 실행되지 않습니다.
 정적 호스팅에서 `/gallery`를 직접 열려면 해당 경로가 `index.html`을 제공하도록 fallback 설정이 필요합니다.
-
-## 확인이 필요한 현재 콘텐츠
-
-- [contact.ts](src/data/contact.ts): 팀장·회장이 모두 `홍길동`, 전화번호가 `010-1234-5678`로 되어 있습니다. 수정 필요합니다.
-- [specs.ts](src/data/specs.ts) / [achievements.ts](src/data/achievements.ts): 2026년 요약은 `100 ps`·`201 km/h`, 상세 제원 출력은 `50 ps`, 성과 기록은 `50 PS`·`131 km/h`입니다. 현재 수치를 유지했으므로 실제 기록 확인 후 맞춰야 합니다.
-- [SponsorshipSection.tsx](src/sections/SponsorshipSection.tsx): 제안서 PDF가 등록되지 않아 다운로드 버튼이 비활성 상태입니다.
-
-코드 정리 후 lint·TypeScript·빌드와 주요 영역의 정적 렌더링 비교, 서버 API 모의 검증을 통과했습니다.
-브라우저 자동화 연결이 없어 실제 화면의 시각 검증은 수행하지 못했습니다. 화면을 수정한 뒤에는 홈·갤러리·모바일 메뉴·차량 선택·문의 결과를 브라우저에서 확인합니다.
