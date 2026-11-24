@@ -1,3 +1,5 @@
+🌐 **동아리 홈페이지: <https://wjdgnrla0309.github.io/KUMA/>**
+
 # KUMA 웹사이트 유지보수 가이드
 
 React · TypeScript · Vite로 만든 KUMA 레이싱 동아리 웹사이트입니다.
@@ -12,7 +14,7 @@ npm ci
 npm run dev
 ```
 
-개발 서버 주소는 기본 `http://localhost:5173`이며 실제 주소는 터미널 출력을 확인합니다.
+개발 서버 주소는 기본 `http://localhost:5173/KUMA/`이며(`vite.config.ts`의 `base: "/KUMA/"`) 실제 주소는 터미널 출력을 확인합니다.
 의존성을 새로 추가하거나 변경할 때는 `npm install`을 사용합니다.
 Windows PowerShell에서 `npm.ps1` 실행 정책 오류가 나면 `npm.cmd ci`, `npm.cmd run dev`처럼 `.cmd`를 붙입니다.
 
