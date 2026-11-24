@@ -1,14 +1,16 @@
 <div align="center">
 
-🌐 **동아리 홈페이지: <https://wjdgnrla0309.github.io/KUMA/>**
-
 <img src="public/cars/2026/KUMA_2026.png" alt="KUMA 2026 포뮬러 차량 앞·옆·뒤" width="100%">
 
-# 🏎️💨 KUMA 웹사이트 유지보수 가이드
+# KUMA Racing Team Website
 
-🐻 공주대 레이싱 동아리 **KUMA**의 집 🏁 &nbsp;|&nbsp; 부릉부릉~ 오늘도 안전운전! 🔧✨
+국립공주대학교 포뮬러 레이싱 동아리 KUMA의 공식 웹사이트 유지보수 가이드
+
+**Website** · <https://wjdgnrla0309.github.io/KUMA/>
 
 </div>
+
+---
 
 React · TypeScript · Vite로 만든 KUMA 레이싱 동아리 웹사이트입니다.
 문구와 기록은 `src/data`, 화면 구성은 `src/pages`와 `src/sections`에서 관리합니다.
